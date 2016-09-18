@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
   devise_for :users
 
-  get 'projects/new'
+  get 'projects/new', to: 'projects#new'
 
-  get 'projects/create'
+  post 'projects/create', to: 'projects#create', as: 'create_project'
 
-  get 'projects/show'
+  get 'projects/:id', to: 'projects#show', as: 'show_project'
 
   get 'projects/destroy'
 
@@ -15,7 +15,6 @@ Rails.application.routes.draw do
 
   get 'projects/index_participating'
 
-  
   get 'users/new'
 
   get 'users/create'
