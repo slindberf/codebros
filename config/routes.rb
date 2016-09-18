@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  devise_for :users
+
   get 'projects/new'
 
   get 'projects/create'
@@ -13,7 +15,7 @@ Rails.application.routes.draw do
 
   get 'projects/index_participating'
 
-  devise_for :users
+  
   get 'users/new'
 
   get 'users/create'
@@ -22,5 +24,6 @@ Rails.application.routes.draw do
 
   get 'users/destroy'
 
+  root 'users#index'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
