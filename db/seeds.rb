@@ -20,3 +20,11 @@ projects = Project.create([
 	{project_type: 'mobile', name: 'code3', purpose: '123456', description: 'Madrid'},
 	{project_type: 'web', name: 'code4', purpose: '123456', description: 'Amsterdam'}
 	])	
+
+
+
+
+
+
+
+

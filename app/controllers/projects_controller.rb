@@ -1,12 +1,13 @@
 class ProjectsController < ApplicationController
   def new
-    
+
     @project = current_user.projects.new
   end
 
   def create
-    @project = current_user.projects.new project_params
+    @project = Project.new project_params
     if @project.save
+      member = current_user.members.create(project_id: @project.id, category: 'back', role: 'admin')
       redirect_to show_project_path @project.id
     else
       render 'projects/new'
