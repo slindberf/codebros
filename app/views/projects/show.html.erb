@@ -1,8 +1,17 @@
-<h1>Projects#show</h1>
+
+<h2>Projects#show</h2>
 <p>Find me in app/views/projects/show.html.erb</p>
+
+
 <!-- 
 <%= @project.inspect %>
  -->
- <%= @project.project_type %>
+	 <p><%= @project.project_type %></p>
+	 <p><%= current_user.city %></p>
+	 <b><%= @project.name %></b>
+	 <p><%= @project.purpose %></p>
+	 <p><%= @project.description %></p>
 
-<%= current_user.name %>
+	<p>Manager: <%= current_user.name.capitalize %></p>
+
+

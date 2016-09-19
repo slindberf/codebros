@@ -26,6 +26,7 @@ class ProjectsController < ApplicationController
   end
 
   def index_all
+    @projects = Project.all
   end
 
   def index_participating

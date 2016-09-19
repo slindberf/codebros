@@ -9,12 +9,21 @@
   </head>
 
   <body>
-  	<% if user_signed_in? %>
-			<%= link_to "Log Out", destroy_user_session_path, method: :delete %>
-  	<% else %>
-  		<%= link_to "Sign Up", new_user_registration_path %>
-			<%= link_to "Log In", new_user_session_path %>
-  	<% end %>
+    <header>
+      <h1>Code Bros</h1>
+
+      <% if user_signed_in? %>
+      <%= link_to "Home", root_path %>
+      <%= link_to "Profile", show_user_path %>
+      <%= link_to "Projects", projects_index_all_path %>
+      <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+      
+    <% else %>
+      <%= link_to "Sign Up", new_user_registration_path %>
+      <%= link_to "Log In", new_user_session_path %>
+    <% end %>
+    </header>
+  	
     <%= yield %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
