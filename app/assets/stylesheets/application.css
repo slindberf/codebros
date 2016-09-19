@@ -40,3 +40,25 @@
   margin-bottom: 15px;
   padding: 7px 9px;
 }
+
+/* Header style */
+
+.header-navbar{
+  background-color: #fff;
+  height: 70px;
+  line-height: 70px;
+  border-bottom: 1px solid black;
+}
+
+.header-navbar nav{
+  
+}
+
+.container{
+  margin: 0 auto;
+}
+
+
+
+
+

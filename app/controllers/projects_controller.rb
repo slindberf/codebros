@@ -1,6 +1,6 @@
 class ProjectsController < ApplicationController
-  def new
 
+  def new
     @project = current_user.projects.new
   end
 
@@ -27,9 +27,9 @@ class ProjectsController < ApplicationController
         @project.destroy
       end
     else
-      render :text => "No molas, no tienes el flow Admin"
+      flash[:alert] = "No molas, no tienes el flow Admin"
+      redirect_to show_project_path @project
     end
-
   end
 
   def index
@@ -41,6 +41,7 @@ class ProjectsController < ApplicationController
   end
 
   def index_participating
+
   end
 
   private
