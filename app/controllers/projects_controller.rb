@@ -1,5 +1,6 @@
 class ProjectsController < ApplicationController
   def new
+    
     @project = current_user.projects.new
   end
 
