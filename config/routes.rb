@@ -9,9 +9,8 @@ Rails.application.routes.draw do
 
   post 'projects/create', to: 'projects#create', as: 'create_project'
 
-  
 
-  get 'projects/destroy'
+  delete 'projects/:id', to: 'projects#destroy', as: 'destroy_project'
 
   get 'projects/index'
 

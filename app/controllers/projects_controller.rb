@@ -15,10 +15,18 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    @project = current_user.projects.find_by(id: params[:id])
+    @project = Project.find_by(id: params[:id])
   end
 
   def destroy
+    @project = current_user.projects.find_by(id: params[:id])
+    puts @project.inspect
+    role = current_user.members.where(project_id: @project.id)[0].role
+    if role == 'admin'
+      @project.destroy
+    else
+      render :text => "No molas, no tienes el flow Admin"
+    end
   end
 
   def index

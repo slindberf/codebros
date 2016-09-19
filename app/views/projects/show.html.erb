@@ -12,6 +12,7 @@
 	 <p><%= @project.purpose %></p>
 	 <p><%= @project.description %></p>
 
-	<p>Manager: <%= current_user.name.capitalize %></p>
+	<p>Logueada <%= current_user.name.capitalize %></p>
 
 
+<%= link_to 'Delete Project', destroy_project_path(@project.id), method: :delete %>
