@@ -15,6 +15,59 @@
  */
 
 /* User sign in and sign forms. */
+
+body {
+  height: 100%;
+  color: #3e3e3e;
+  background: #f5f5f5;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+ul li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: #5a5050;
+}
+
+a:hover {
+  color: #10DDC2;
+}
+
+/* para crear menús dinámicos con JS */
+
+.active {
+  color: #15B7B9;
+}
+
+.display-i-b {
+  display: inline-block;
+}
+
+.display-b {
+  display: block;
+}
+
+/* header */
+
+h1 a {
+  color: #10DDC2;
+  font-size: 1.6em;
+}
+
+h1 span {
+  color: #15B7B9;
+}
+
+.logo{
+
+}
+
+/* Log-in Style */
+
 .border-form-div {
   max-width: 300px;
   padding: 19px 29px 29px;
@@ -43,7 +96,7 @@
 
 /* Header style */
 
-.header-navbar{
+/*.header-navbar{
   background-color: #fff;
   height: 70px;
   line-height: 70px;
@@ -56,7 +109,7 @@
 
 .container{
   margin: 0 auto;
-}
+}*/
 
 
 
