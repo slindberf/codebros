@@ -1,13 +1,19 @@
 <h1>Projects#index_all</h1>
 <p>Find me in app/views/projects/index_all.html.erb</p>
-
+<hr>
 <% @projects.each do |project| %>
+
  <p>Project: <%= project.project_type %></p>
 	 <p>City: <%= current_user.city %></p>
 	 <b>Name: <%= project.name %></b>
 	 <p>Main purpose: <%= project.purpose %></p>
-	 <p>Description: <%= project.description %></p>
+   <p>Description: <%= project.description %></p>
+	 <p>Description: <%= project.id %></p>
+   <%= link_to 'Show Project', show_project_path(project.id) %>
+   <hr>
+
 <% end %>
 	<p>Manager: <%= current_user.name.capitalize %></p>
+
 
 	

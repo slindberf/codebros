@@ -3,6 +3,8 @@
 <p>Find me in app/views/projects/show.html.erb</p>
 
 
+
+
 <!-- 
 <%= @project.inspect %>
  -->
@@ -10,9 +12,13 @@
 	 <p><%= current_user.city %></p>
 	 <b><%= @project.name %></b>
 	 <p><%= @project.purpose %></p>
-	 <p><%= @project.description %></p>
+   <p><%= @project.description %></p>
+	 <p><%= @project.id %></p>
+
 
 	<p>Logueada <%= current_user.name.capitalize %></p>
 
 
 <%= link_to 'Delete Project', destroy_project_path(@project.id), method: :delete %>
+<%= link_to 'Apply', apply_project_path(@project.id) %>
+<%= link_to 'Leave', leave_project_path(@project.id) %>

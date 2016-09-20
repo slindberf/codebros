@@ -2,12 +2,16 @@
 <h1>Projects#new</h1>
 <p>Find me in app/views/projects/new.html.erb</p>
 
+
+
 <%= form_for @project, url: create_project_path do |f| %>
+
 
 	<div class="field">
     <%= f.label :project_type %><br />
     <%= f.text_field :project_type %>
   </div>
+
 	<div class="field">
     <%= f.label :name %><br />
     <%= f.text_field :name %>
@@ -21,9 +25,17 @@
     <%= f.text_area :description %>
     <!-- para cambiar tamaño size: '30x50' columns and row -->
   </div>
+  <div class="field">
+    <%= label_tag :category %><br />
+    <%= select_tag(:category,options_for_select([['Back-end', 'back'], ['Front-end', 'front'], ['Full-stack','full']]) ) %>
+
+    <!-- para cambiar tamaño size: '30x50' columns and row -->
+  </div>
 	
 	<div class="actions">
     <%= f.submit 'Create' %>
   </div>
- <% end %>
- </div>
+<% end %>
+
+
+</div>
