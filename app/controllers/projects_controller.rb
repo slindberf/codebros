@@ -2,26 +2,39 @@ class ProjectsController < ApplicationController
 
   def new
     @project = current_user.projects.new
+    @project.members.build
   end
 
   def create
-    @project = Project.new project_params
-    if @project.save
-      member = current_user.members.create(project_id: @project.id, category: 'back', role: 'admin')
+    #hay que hacer create para que cree member (con new no se crea)
+    # binding.pry
+    @project = current_user.projects.create project_params
+    #if @project.save
+      member = current_user.members.find_by(project_id: @project.id)
+      
+      member.category = params[:category] #'Back' #params[:user_category]
+
+      member.role = 'admin'
+      member.save
+
       redirect_to show_project_path @project.id
-    else
-      render 'projects/new'
-    end 
+    #else
+    #  render 'projects/new'
+    #end 
   end
 
   def show
     @project = Project.find_by(id: params[:id])
+    if !(@project)
+      flash[:alert] = "Error 404 project not found fucker"
+      redirect_to projects_index_all_path
+    end
   end
 
   def destroy
     @project = Project.find_by(id: params[:id])
     #binding.pry
-    member = current_user.members.where(project_id: @project.id)[0]
+    member = current_user.members.find_by(project_id: @project.id)
     if(member)
       if member.role == 'admin'
         @project.destroy
@@ -33,7 +46,14 @@ class ProjectsController < ApplicationController
   end
 
   def index
-    @projects = current_user.projects
+    #where you are 
+    projects = current_user.projects
+    @my_projects = []
+    projects.each do |project|
+      if(project.members.find_by(role: 'admin', user_id: current_user.id))
+        @my_projects.push(project)
+      end
+    end
   end
 
   def index_all
@@ -41,7 +61,44 @@ class ProjectsController < ApplicationController
   end
 
   def index_participating
+    @projects = current_user.projects
+  end
 
+  def add_user_to_project
+    @project = Project.find_by(id: params[:project_id])
+    if(!(current_user.projects.find_by(id: @project.id)))
+
+      
+      @project.users.push(current_user)
+      member = current_user.members.find_by(project_id: @project.id)
+      member.role = 'participating'
+      member.category = 'Full-stack'
+      member.save
+      flash[:notice] = "El admin de este grupo ha recibido tu petición. Espera pelotudo"
+
+    else
+      flash[:alert] = "Ya curras aquí pringao"
+    end
+
+    redirect_to show_project_path(@project.id)
+  end
+
+  def leave_project
+    @project = Project.find_by(id: params[:project_id])
+    if(current_user.projects.find_by(id: @project.id))
+
+      member = current_user.members.find_by(project_id: @project.id)
+      if (member.role == 'admin')
+        flash[:alert] = "No puedes abandonar a tus amigos... traidor vete a eliminar el proyecto"
+      else
+        member.destroy
+        flash[:notice] = "Has abandonado el grupo"
+      end
+    else
+      flash[:alert] = "No puedes abandnar a un equipo que no perteneces. punto."
+    end
+
+    redirect_to show_project_path(@project.id)
   end
 
   private
