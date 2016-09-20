@@ -1,0 +1,74 @@
+.center {
+  margin: 0 auto;
+  width: 100%;
+  
+}
+.row{
+    width: 100%;
+    margin:  0 auto;
+    overflow: hidden;
+}
+
+/*Retícula 12Columns*/
+.col{
+   margin-right: 1%;
+   width: 100%;
+   height: 70px;
+   background: #cecece;
+   float: left;
+   margin-top: 1%;
+   word-break: break-all;
+}
+
+.col:last-child{
+    margin-right: 0;
+}
+
+/* 
+1º---> 100% - (nºmedianiles * tamaño) = espacio a repartir entre columnas 
+2º---> espacio a repartir entre columnas / nºcolumnas = tamaño de la columna unitaria, es decir, col-1
+*/
+.col-1{ 
+    width: 7.41%;
+}
+.col-2{ /*(7.41*2)+1% -> (width.col1 + margin.col1) + width.col1 */
+    width: 15.82%;
+}
+.col-3{ /* (7.41*3)+2% */
+    width: 24.23%;
+}
+.col-4{ /* (7.41*4)+3% */
+    width: 32.64%;
+}
+.col-5{
+    width: 41.06%;
+}
+.col-6{
+    width: 49.48%;
+}
+.col-7{
+    width: 57.90%;
+}
+.col-8{
+    width: 66.32%;
+}
+.col-9{
+    width: 74.74%;
+}
+.col-10{
+    width: 83.16%;
+}
+.col-11{
+    width: 91.58%;
+}
+.col-12{
+    width: 100%;
+}
+
+
+@media all and (max-width:600px){
+    .col{
+        width: 100%;
+        margin-right: 0;
+    }
+}
