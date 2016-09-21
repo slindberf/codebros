@@ -1,7 +1,7 @@
 class User < ApplicationRecord
   # Include default devise modules. Others available are:
   # :confirmable, :lockable, :timeoutable and :omniauthable
-
+  attr_accessor :skill
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   
@@ -16,7 +16,7 @@ class User < ApplicationRecord
                     uniqueness: { case_sensitive: false }
   validates :name, presence: true
 
-  def skills=(skills)
-    
+  def skill=(skill)
+    self.skills << Skill.where(name: skill, user_id: current_user.id).first_or_create
   end
 end

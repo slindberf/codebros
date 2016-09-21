@@ -1,8 +1,11 @@
 document.addEventListener('DOMContentLoaded', function(event){
-	btn = document.getElementsByClassName('js-add-skill')[0];
-	input = document.getElementsByClassName('js-skill')[0];
-	list = document.getElementsByClassName('added-skills')[0];
+	var btn = document.getElementsByClassName('js-add-skill')[0];
+	var input = document.getElementsByClassName('js-skill')[0];
+	var list = document.getElementsByClassName('added-skills')[0];
+	var formEdit = document.getElementsByClassName('edit_user')[0];
+	//var userSkills = {}
 	
+
 	var skills = [];
 	btn.onclick = function(e){
 		e.preventDefault()
@@ -18,7 +21,17 @@ document.addEventListener('DOMContentLoaded', function(event){
 		list_li.appendChild(skill_node);
 		list.appendChild(list_li);
 	}
+
+	formEdit.onsubmit=function(e){
+		e.preventDefault();
+		input.value = skills;
+		console.log('makna');
+		 this.submit();
+
+	}
 });
+
+
 
 
 

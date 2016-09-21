@@ -52,7 +52,7 @@ header {
   border-bottom: 1px solid  rgba(0, 26, 44, 0.1);
 }
 h1 {
-    margin-top: 1.3em;
+    margin-top: 1.2em;
     margin-left: 1em;
 }
 
@@ -66,6 +66,10 @@ h1 span {
 
 nav li {
   display: inline-block;
+  margin-left: 1em; 
+}
+nav ul {
+  margin-top: 1.5em;
 }
 /* Log-in Style */
 .border-form-div {
