@@ -45,6 +45,7 @@ a:hover {
 h1 a {
   color: #10DDC2;
   font-size: 1.6em;
+  padding: 1em;
 }
 h1 span {
   color: #15B7B9;
@@ -55,7 +56,9 @@ nav li {
 }
 
 header {
-  background-color: red;
+  width:100%;
+  background: #fff;
+  border-bottom: 1px solid  rgba(0, 26, 44, 0.1);
 }
 /* Log-in Style */
 .border-form-div {
