@@ -9,51 +9,41 @@
   </head>
 
   <body>
-    <header class="header-navbar">
-      <div class="row">
-        <div class="col col-2">
-          <h1><a class="logo" href="http://codebros.herokuapp.com/">Code<span>Bros</span></a></h1>
-        </div>
-        <div class="col col-2"></div>
+    <header>
+        <div class="wrapper">
+          <div class="logo">
+            <a class="logo" href="http://codebros.herokuapp.com/">Code<span>Bros</span>
+            </a>
+          </div>
+
         <% if user_signed_in? %>
-          <div class="col col-4">
-            <nav class="display-i-b">
-              <ul>
-              <li><%= link_to "Home", root_path %></li>
-              <li><%= link_to "Profile", show_user_path %></li>
-              <li><%= link_to "Projects", projects_index_all_path %></li>
-              </ul>
-            </nav>
-          </div>
-        <div class="col col-1"></div>
-        <div class="col col-3">
-          <nav class="display-i-b">
-            <ul>
-              <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
-              <li><%= link_to current_user.name, show_user_path %></li>
-            </ul>
+          
+          <nav class="menu-signed-in">
+            <%= link_to "Home", root_path %>
+            <%= link_to "Profile", show_user_path %>
+            <%= link_to "Projects", projects_index_all_path %>
           </nav>
-        </div>   
+        
+          <nav class="menu-not-signed">
+            <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
+            <%= link_to current_user.name, show_user_path %>
+          </nav>
+  
         <% else %>
-          <div class="col col-5"></div>
-          <div class="col col-3">
-            <nav class="display-i-b">
-              <ul>
-                <li><%= link_to "Sign Up", new_user_registration_path %></li>
-                <li><%= link_to "Log In", new_user_session_path %></li>
-              </ul>
-            </nav>
-          </div>
-        <% end %>
+          
+          <nav class="menu-not-signed">
+            <%= link_to "Sign Up", new_user_registration_path %>
+            <%= link_to "Log In", new_user_session_path %>
+          </nav>
          
-       
+        <% end %>
       </div>
 
      
       
       
     </header>
-  	
+    
     <%= yield %>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
