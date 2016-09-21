@@ -11,7 +11,15 @@
 
    <div class="js-skills field">
     <%= f.label :skills %><br />
-    <%= f.text_field :skills, class: 'js-skill', value:""; %>
+    <%= f.text_field :skills, class: 'js-skill', value:"", list: 'skills' %>
+      <datalist id="skills">
+        <option value="Java">
+        <option value="Ruby">
+        <option value="JavaScript">
+        <option value="PHP">
+        <option value="Python">
+        <option value="CSS">
+      </datalist>
     <%= f.submit "Add", class: 'js-add-skill' %>
   </div>
   
