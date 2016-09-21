@@ -48,14 +48,7 @@ class ProjectsController < ApplicationController
   end
 
   def index
-    #where you are 
-    projects = current_user.projects
-    @my_projects = []
-    projects.each do |project|
-      if(project.members.find_by(role: 'admin', user_id: current_user.id))
-        @my_projects.push(project)
-      end
-    end
+    @projects = Project.where(id: current_user.members.where(role: 'admin').pluck(:project_id))
   end
 
   def index_all

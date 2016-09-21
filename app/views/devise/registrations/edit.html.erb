@@ -9,6 +9,17 @@
     <%= f.email_field :email, autofocus: true %>
   </div>
 
+   <div class="js-skills field">
+    <%= f.label :skills %><br />
+    <%= f.text_field :skills, class: 'js-skill', value:""; %>
+    <%= f.submit "Add", class: 'js-add-skill' %>
+  </div>
+  
+  <div>
+    <ul class="added-skills" >
+      <!--<li>js...</li>-->
+    </ul>
+  </div>
   <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
     <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
   <% end %>
