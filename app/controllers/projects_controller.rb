@@ -38,11 +38,13 @@ class ProjectsController < ApplicationController
     if(member)
       if member.role == 'admin'
         @project.destroy
+        flash[:notice] = "Proyecto eliminado"
+        redirect_to projects_index_path
       end
-    else
-      flash[:alert] = "No molas, no tienes el flow Admin"
-      redirect_to show_project_path @project
     end
+    flash[:alert] = "No molas, no tienes el flow Admin"
+    redirect_to show_project_path @project
+    
   end
 
   def index
