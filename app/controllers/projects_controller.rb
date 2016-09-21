@@ -25,12 +25,13 @@ class ProjectsController < ApplicationController
 
   def show
     @project = Project.find_by(id: params[:id])
-    if !(@project)
+    if (@project)
+      @admin = User.find_by(id: @project.members.where(role: 'admin').pluck(:user_id))
+      @name = @admin.name
+    else
       flash[:alert] = "Error 404 project not found fucker"
       redirect_to projects_index_all_path
     end
-    @admin = User.find_by(id: @project.members.where(role: 'admin').pluck(:user_id))
-    @name = @admin.name
     
   end
 
