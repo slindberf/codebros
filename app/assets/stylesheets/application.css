@@ -49,7 +49,7 @@ header {
   margin:auto; 
   max-width:1000px;
   overflow:hidden; 
-  width:96%; 
+  width:100%; 
 }
 /*Logo*/
 header .logo {
@@ -73,7 +73,15 @@ header .logo {
 .menu-user a:last-child{
   border-left: 1px solid #10DDC2;
 }
-
+.img-user {
+  position: absolute;
+  top: 28px;
+  right: 26px;
+}
+.img-user img{
+  width: 45px;
+  height: 45px;
+}
 .menu-user a {
   color: #5a5050;
   padding:10px 20px;
@@ -160,14 +168,25 @@ header button::after{
     .menu-user {
     display: block;
     }
-
+    .menu-user {
+      width:100%;
+    }
     .menu-user a {
+      float:left;
       width: 100%;
       text-align: center;
-      background: black;
+      
     } 
-    
+    .menu-user a:last-child{
+      border-left: none;
 }
+    
+}@media all and (max-width:830px){
+  .menu-user a:nth-child(3n){
+  margin-right: 0em;
+}
+}
+
 
    
 
