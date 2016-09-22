@@ -52,7 +52,7 @@ class ProjectsController < ApplicationController
   end
 
   def index
-    @projects = Project.where(id: current_user.members.where(role: 'admin').pluck(:project_id))
+    @projects = current_user.admin_projects
   end
 
   def index_all
