@@ -5,6 +5,8 @@ Rails.application.routes.draw do
 
   get 'users/show', to: 'users#show', as: 'show_user'
 
+  delete 'users/skills/:id', to: 'users#remove_skill', as: 'remove_skill'
+  
   get 'projects/new', to: 'projects#new'
 
   post 'projects/create', to: 'projects#create', as: 'create_project'

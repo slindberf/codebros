@@ -25,6 +25,7 @@
           <ul>
             <% current_user.skills.each do |skill| %>
               <li><%= skill.name %></li>
+              <%= button_to "X", remove_skill_path(skill.id), method: :delete %>
             <% end %>
           </ul>
         </div>
