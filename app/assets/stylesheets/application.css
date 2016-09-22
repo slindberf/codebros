@@ -81,6 +81,7 @@ header .logo {
 .img-user img{
   width: 45px;
   height: 45px;
+  border-radius: 45px;
 }
 .menu-user a {
   color: #5a5050;
