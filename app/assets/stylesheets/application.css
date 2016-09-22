@@ -36,63 +36,81 @@ a {
 
 /* header */
 header {
-  margin-top: 0;
-  width:100%;
   background: #fff;
   border-bottom: 1px solid  rgba(0, 26, 44, 0.1);
+  margin-top: 0;
   min-height: 70px;
   overflow:hidden;
-  margin-bottom: 20px;
+  position: relative;
+  width:100%;
 }
 
 .wrapper {
-  width:96%; 
-  max-width:1000px;
   margin:auto; 
+  max-width:1000px;
   overflow:hidden; 
+  width:96%; 
 }
-
+/*Logo*/
 header .logo {
+  float:left;
   font-size:40px;
   line-height:100px;
-  float:left;
 }
-.logo a {
+.logo-a {
   color: #10DDC2;
 }
 
-.logo span {
+.logo-a span {
   color: #15B7B9;
 }
-
-header nav {
+/*Menu User*/
+.menu-user {
+  float: right;
   line-height:100px;
 }
 
-.menu-signed-in {
-  float: left;
-  margin-left: 130px;
-}
-.menu-not-signed {
-  float: right;
-}
-.menu-not-signed a:last-child{
+.menu-user a:last-child{
   border-left: 1px solid #10DDC2;
 }
-header nav a {
-  display:inline-block;
+
+.menu-user a {
   color: #5a5050;
   padding:10px 20px;
   line-height:normal;
   font-size:20px;
   font-weight:bold;
-  -webkit-transition:all 500ms ease;
-  -o-transition:all 500ms ease;
-  transition:all 500ms ease;
 }
- 
-header nav a:hover {
+
+.menu-user a:nth-child(3n){
+  margin-right: 5em;
+}
+
+.menu-user a:hover {
   color: #10DDC2;
+}
+/*Button for responsive menu*/
+header button {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    background: #08cbc4;
+    border: none;
+    float: right;
+    margin-right: 30px;
+    margin-top: 30px;
+    display: none; 
+}
+
+header button::after{
+    position: absolute;
+    content: '';
+    width: 70%;
+    height: 4px;
+    background: #fff;
+    top: 7px;
+    left: 16%;
+    box-shadow: 0 10px 0 #fff, 0 20px 0 #fff;
 }
 
 /* Log-in Style */
@@ -122,8 +140,35 @@ header nav a:hover {
   padding: 7px 9px;
 }
 
+/*media queries*/
+@media all and (max-width:750px){
+    .col{
+        width: 100%;
+        margin-right: 0;
+        min-height: 50px;
+        border-bottom: 1px solid black;
+    }
+    header .logo {
+      font-size:50px;     
+    }
+    .logo-a {
+      margin-left: 30px;
+    }
+    header button {
+      display: block; 
+    }
+    .menu-user {
+    display: block;
+    }
 
+    .menu-user a {
+      width: 100%;
+      text-align: center;
+      background: black;
+    } 
+    
+}
 
-
+   
 
 
