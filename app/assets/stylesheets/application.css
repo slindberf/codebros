@@ -47,7 +47,7 @@ header {
 
 .wrapper {
   margin:auto; 
-  max-width:1000px;
+  max-width:1200px;
   overflow:hidden; 
   width:100%; 
 }
@@ -174,20 +174,24 @@ header button::after{
     .menu-user a {
       float:left;
       width: 100%;
-      text-align: center;
-      
+      text-align: center;   
     } 
     .menu-user a:last-child{
       border-left: none;
-}
+    }
     
-}@media all and (max-width:830px){
+}
+
+@media all and (max-width:830px){
   .menu-user a:nth-child(3n){
   margin-right: 0em;
-}
+  }
 }
 
+@media all and (max-width:830px){
+ 
 
+}
    
 
 

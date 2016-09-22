@@ -19,7 +19,7 @@
         <% if user_signed_in? %>
           <div class="img-user">
               <%= image_tag("user-default.png")%>
-            </div>
+          </div>
           <nav class="menu-user">
 
             <%= link_to "Home", root_path %>
@@ -31,10 +31,10 @@
             <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
 
             <%= link_to current_user.name, show_user_path, style: 'color: rgba(0,0,0,0);' %>
-
+          </nav>
         <% else %>
           
-          
+          <nav class="menu-user">
             <%= link_to "Sign Up", new_user_registration_path %>
             <%= link_to "Log In", new_user_session_path %>
           </nav>
