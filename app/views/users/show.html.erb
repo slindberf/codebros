@@ -1,7 +1,38 @@
 <h1>Users#show</h1>
 <p>Find me in app/views/users/show.html.erb</p>
 
-<%= link_to "Edit Profile", user_registration_path, method: :patch %>
+<div class='index-profile'>
+  <section class='wrapper'>
+    <div class='row'>
+      <div class='col col-1'></div>
+      <div class='col col-3'>
+        <div class=user-img>
+          <%=image_tag("user-default.png", alt: "Example Image")%>
+        </div>
+        <hr>
+        <%= button_to "Edit Profile", user_registration_path, method: :patch %>
+        <hr>
+        <%= button_to "Delete user", user_registration_path, data: { confirm: "Are you sure?" }, method: :delete %>
+      </div>
+      <div class='col col-7'>
+        <div class='user-name'>
+          <p><%= current_user.name %></p>
+        </div>
+        <div class='user-city'>
+          <p><%= current_user.city %></p>
+        </div>
+        <div class='user-skills'>
+          <ul>
+            <% current_user.skills.each do |skill| %>
+              <li><%= skill.name %></li>
+            <% end %>
+          </ul>
+        </div>
+      </div>
+      <div class='col col-1'></div>     
+    </div>
+  </section>
+</div>
 
 
 
