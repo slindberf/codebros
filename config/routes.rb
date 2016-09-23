@@ -14,6 +14,8 @@ Rails.application.routes.draw do
 
       get 'projects/index_participating', to: 'projects#index_participating'
 
+      post 'projects/:id/apply', to: 'projects#apply_project'
+
     end
 
   end 

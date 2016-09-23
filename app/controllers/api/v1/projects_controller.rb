@@ -1,5 +1,5 @@
 class Api::V1::ProjectsController < ApplicationController
-
+  
   #devuelve todos los proyectos
   def index_all
     #hay que añadir paginación para que no devuelva todos los proyectos
@@ -20,22 +20,23 @@ class Api::V1::ProjectsController < ApplicationController
   end
 
   def apply_project
-    project = Project.find_by(id: params[:project_id])
+    
+    project = Project.find_by(id: params[:id])
     if project
       if !(current_user.projects.find_by(id: project.id))
         project.add_user(current_user)
         member = current_user.members.find_by(project_id: project.id)
         category =  params[:data]
-        member.edit_attr!('in process', category)
+        member.edit_attr!('future_member', category)
         #member creado a partir de apply (201)
-        render status: 200
+        render json: {error: 'hola'}, status: 200
       else
         #ya existe el member del usuario
-        render status: 400
+        render json: {error: 'hola'}, status: 400
       end
     else
       #project no encontrado
-      render status: 404 
+      render json: {error: 'hola'}, status: 404 
     end
   end
 

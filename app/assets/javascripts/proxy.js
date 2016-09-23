@@ -6,6 +6,7 @@ function proxy(method, url, responseType, params){
     xhr.withCredentials = false;
     xhr.responseType = responseType;
 
+
     xhr.onload = function(){
       if (xhr.status === 200){
         resolve(xhr.response);

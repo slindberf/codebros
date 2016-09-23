@@ -40,12 +40,21 @@
 <!-- 
 <%= @project.inspect %>
  -->
-
-
-
 	<p>Logueada <%= current_user.name.capitalize %></p>
+<div class="js-container-options">
+<% if @role == 'admin' %>
+	<%= link_to 'Delete Project', destroy_project_path(@project.id), method: :delete %>
+<% elsif @role == 'future_member' %>
 
+	<button class="js-btn-apply" data-id="<%= @project.id %>">Apply</button>
 
-<%= link_to 'Delete Project', destroy_project_path(@project.id), method: :delete %>
-<%= link_to 'Apply', apply_project_path(@project.id) %>
-<%= link_to 'Leave', leave_project_path(@project.id) %>
+	<select  class="js-category">
+    <option value='Back-end'>Back-end</option>
+    <option value='Front-end'>Front-end</option>
+    <option value='Full-stack'>Full-stack</option>
+  </select>
+
+<% else %>
+	<button class="js-btn-leave" data-id="<%= @project.id %>">Leave</button>
+<% end %>
+</div>

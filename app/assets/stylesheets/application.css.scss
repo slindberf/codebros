@@ -14,6 +14,13 @@
  *= require_self
  */
 /* User sign in and sign forms. */
+
+
+$seaGreen: #15b7b9;
+$lightGreen: #10ddc2;
+$bWhite: #f5f5f5;
+$pink: #f57170;
+
 html, body {
     height: 100%;
 }
@@ -62,7 +69,8 @@ header .logo {
 }
 
 .logo-a span {
-  color: #15B7B9;
+  // color: #15B7B9;
+  color: $seaGreen;
 }
 /*Menu User*/
 .menu-user {

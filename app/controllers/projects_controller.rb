@@ -17,7 +17,7 @@ class ProjectsController < ApplicationController
     if(@project)
       member = current_user.members.find_by(project_id: @project.id)
       member.edit_attr!('admin', params[:category])
-      @flash[:notice] = 'Project created successfully'
+      flash[:notice] = 'Project created successfully'
       redirect_to show_project_path @project.id
     else
       render 'projects/new'
@@ -29,6 +29,14 @@ class ProjectsController < ApplicationController
     if (@project)
       admin = User.find_by(id: @project.members.where(role: 'admin').pluck(:user_id))
       @name = admin.name
+      member = current_user.members.find_by(project_id: @project.id) 
+      if !member 
+        @role = 'future_member' #apply
+      elsif current_user == admin
+        @role = 'admin' #delete
+      else 
+        @role = 'candidate' #leave
+      end
     else
       flash[:alert] = "Error 404 project not found."
       redirect_to projects_index_all_path
