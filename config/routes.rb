@@ -3,6 +3,21 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  #usar namespace para que gener el path con api y v1
+  namespace :api do
+
+    namespace :v1 do
+
+      get 'projects/index', to: 'projects#index'
+
+      get 'projects/index_all', to: 'projects#index_all'
+
+      get 'projects/index_participating', to: 'projects#index_participating'
+
+    end
+
+  end 
+
   get 'users/show', to: 'users#show', as: 'show_user'
 
   delete 'users/skills/:id', to: 'users#remove_skill', as: 'remove_skill'

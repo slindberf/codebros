@@ -4,6 +4,16 @@ class Member < ApplicationRecord
 
   after_destroy :cleanup_project
 
+  def edit_attr! role, category
+    self.role = role
+    self.category = category
+    self.save
+  end
+
+  def admin?
+    self.role == 'admin'
+  end
+
   private
 
   def cleanup_project
