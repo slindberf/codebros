@@ -2,9 +2,10 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-/*banner*/
+
+/********************************banner*/
 .banner-coding {
-	width: 100%;
+  width: 100%;
   background: #f57170;
   overflow: hidden;
   position: relative;
@@ -15,7 +16,42 @@
   overflow: hidden;
   position: relative;  
 }
+.b_share {
+  background: #fff;
+  border-bottom: 1px solid  rgba(0, 26, 44, 0.1);
+}
+.banner-projects {
+  width: 100%;
+  height: 470px;
+  background:url('computer.jpg') no-repeat top;
+  background-size: 100%;
+}
+.lettering {
+  display: table;
+  width: 100%;
+  height: 350px;
+}
 
+.lettering-right {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+.banner-projects p{
+  color: #fff;
+  font-size: 1em;
+  text-shadow: 1px 1px 0 rgba(0,0,0,.54); 
+}
+.banner-projects .lettering h2{
+  font-size: 3em;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 rgba(0,0,0,.54);  
+}
+
+.lettering h2 span {
+  color: #15b7b9;
+}
 
 .banner-wrapper {
   margin: 0 auto;
@@ -35,9 +71,10 @@ article {
   text-align: center;
 }
 
-.coding-description h2,
-.banner-description-share h2, {
+.coding-description h3,
+.banner-description-share h3 {
   padding-bottom: 1em;
+  font-size: 2em;
 }
 
 .coding-description p,
@@ -45,11 +82,8 @@ article {
   width: 400px;
   margin-left: 6em;
 }
-.banner-description-share h2,
-.banner-description-share p {
-  color: #808080;
-}
-.coding-description h2,
+
+.coding-description h3,
 .coding-description p {
   color: #fff;
 }
@@ -72,5 +106,40 @@ article {
   float: right;
   height: 348px;
   width:50%;
+}
+
+.banner-description-share h3,
+.banner-description-share p {
+  color: #808080;
+}
+
+.projects h3 {
+    color: #5a5050;  
+    font-size: 40px;
+    line-height: 50px;
+    margin-bottom: 71px;
+    margin-top: 80px;
+    text-align: center;
+}
+.projects .container {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.container {
+    width: 1200px;
+    margin-right: auto;
+    margin-left: auto;
+}
+.container:before, .container:after {
+    content: " ";
+    display: table;
+}
+.container:after {
+    clear: both;
+}
+
+.text-center {
+    text-align: center;
 }
 
