@@ -1,3 +1,76 @@
 // Place all the styles related to the site controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+/*banner*/
+.banner-coding {
+	width: 100%;
+  background: #f57170;
+  overflow: hidden;
+  position: relative;
+}
+.banner-design {
+  width: 100%;
+  background: #10ddc2;
+  overflow: hidden;
+  position: relative;  
+}
+
+
+.banner-wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  overflow: hidden;
+}
+.coding-description {
+  display: table;
+  float: left;
+  height: 348px;
+  width:50%;
+}
+
+article {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+.coding-description h2,
+.banner-description-share h2, {
+  padding-bottom: 1em;
+}
+
+.coding-description p,
+.banner-description-share p {
+  width: 400px;
+  margin-left: 6em;
+}
+.banner-description-share h2,
+.banner-description-share p {
+  color: #808080;
+}
+.coding-description h2,
+.coding-description p {
+  color: #fff;
+}
+.coding-img {
+  float: right;
+  width:50%; 
+}
+.coding-img img,
+.banner-img-share img {
+  width: 100%;
+}
+
+.banner-img-share {
+  float: left;
+  width:50%; 
+}
+
+.banner-description-share {
+  display: table;
+  float: right;
+  height: 348px;
+  width:50%;
+}
+

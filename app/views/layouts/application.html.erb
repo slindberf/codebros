@@ -9,49 +9,44 @@
   </head>
 
   <body>
-    <header>
-        <div class="wrapper">
-          <div class="logo">
+    <%= yield %>
+      <header>
+        <p class="notice"><%= notice %></p>
+        <p class="alert"><%= alert %></p>
+        <div class="wrapper-menu">
+          <h1>
             <a class="logo-a" href="http://codebros.herokuapp.com/">Code<span>Bros</span>
             </a>
-          </div>
-          <button class="dl-trigger"></button>
+          </h1>
+
         <% if user_signed_in? %>
-          <div class="img-user">
-              <%= image_tag("user-default.png")%>
-          </div>
           <nav class="menu-user">
-
-            <%= link_to "Home", root_path %>
-            <%= link_to "Profile", show_user_path %>
-            <%= link_to "Projects", projects_index_all_path %>
-         
-        
-
-            <%= link_to "Log Out", destroy_user_session_path, method: :delete %>
-
-            <%= link_to current_user.name, show_user_path, style: 'color: rgba(0,0,0,0);' %>
+            <ul>
+              <li><%= link_to "Home", root_path %></li>
+              <li><%= link_to "Profile", show_user_path %></li>
+              <li><%= link_to "Projects", projects_index_all_path %></li>  
+            </ul>
+          </nav>
+          <nav class="menu-log-in">
+            <ul>
+              <li><%= link_to "Log Out", destroy_user_session_path, method: :delete %></li>
+              <li><%= link_to current_user.name, show_user_path, style: 'color: rgba(0,0,0,0);' %></li>
+              <li><a><%= image_tag("user-default.png", class:"avatar-user") %></a></li>
+            </ul>
           </nav>
         <% else %>
-          
-          <nav class="menu-user">
-            <%= link_to "Sign Up", new_user_registration_path %>
-            <%= link_to "Log In", new_user_session_path %>
+          <nav class="menu-log-in">
+            <ul>
+              <li><%= link_to "Sign Up", new_user_registration_path %></li>
+              <li><%= link_to "Log In", new_user_session_path %></li>
+            </ul>
           </nav>
-         
-        <% end %>
+        
+        </div>
+      </header>
+    <%= render :partial => "site/home" %>
+    <% end %>
 
-      </div>
-
-     
-      
-      
-    </header>
-    
-    <%= yield %>
-
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
   </body>
 </html>
 
