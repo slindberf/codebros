@@ -23,8 +23,9 @@
 .banner-projects {
   width: 100%;
   height: 470px;
-  background:url('computer.jpg') no-repeat top;
+  background: url('computer.png') no-repeat top;
   background-size: 100%;
+  background-attachment: fixed;
 }
 .lettering {
   display: table;

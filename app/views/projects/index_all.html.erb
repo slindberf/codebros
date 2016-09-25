@@ -1,8 +1,13 @@
-<h1>Projects#index_all</h1>
-<p>Find me in app/views/projects/index_all.html.erb</p>
-<hr>
-<% @projects.each do |project| %>
+<section class="project-search-wrap">
+	<form>
+		<input type="text" name="search" placeholder="Search..">
+	</form>
+</section>
 
+<section>
+
+<% @projects.each do |project| %>
+<div class="project-all">
  <p>Project: <%= project.project_type %></p>
 	 <p>City: <%= current_user.city %></p>
 	 <b>Name: <%= project.name %></b>
@@ -10,10 +15,9 @@
    <p>Description: <%= project.description %></p>
 	 <p>Description: <%= project.id %></p>
    <%= link_to 'Show Project', show_project_path(project.id) %>
-   <hr>
-
+</div>
 <% end %>
 	<p>Manager: <%= current_user.name.capitalize %></p>
 
-
+</section>
 	

@@ -78,6 +78,9 @@
   background-color: #B55453;
   outline-color: #FF908E;
 }
+input:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+}
 /*blue*/
 .input-txt-blue {
   width: 100%;
