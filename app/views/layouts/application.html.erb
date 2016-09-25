@@ -10,18 +10,37 @@
 
   <body>
 
-    
-    <p class="notice"><%= notice %></p>
-    <p class="alert"><%= alert %></p>
-    <%= render :partial => "site/header" %>
-
-    <% if user_signed_in? %>
-      <%= render :partial => "site/signed_in" %> 
-    <% else %>
-      <%= render :partial => "site/signed_out" %>
+  <% if current_page?(new_user_session_path) %>
       
-    <% end %>
-    <%= yield %>
+  <% elsif current_page?(new_user_registration_path) %>
+      
+  <% elsif user_signed_in? %>
+    <header>
+      <div class="wrapper-menu">
+        <h1>
+          <a class="logo-a" href="http://codebros.herokuapp.com/">Code<span>Bros</span>
+          </a>
+        </h1>
+      <%= render :partial => "site/signed_in" %>
+      </div>
+    </header>
+  <% else %>
+    <header>
+      <div class="wrapper-menu">
+        <h1>
+          <a class="logo-a" href="http://codebros.herokuapp.com/">Code<span>Bros</span>
+          </a>
+        </h1>
+        <%= render :partial => "site/signed_out" %>
+     </div>
+    </header>
+  <% end %>
+
+    
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+  <%= yield %>
+
   </body>
 </html>
 

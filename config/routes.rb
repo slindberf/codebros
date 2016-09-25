@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  root 'site#index', page: "index"
+  root 'site#index'
 
   devise_for :users
 
