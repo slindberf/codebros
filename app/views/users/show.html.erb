@@ -6,9 +6,13 @@
     <div class='row'>
       <div class='col col-1'></div>
       <div class='col col-3'>
-        <div class=user-img>
-          <%=image_tag("user-default.png", alt: "Example Image")%>
-        </div>
+        <div class=user-img> 
+         <% if(current_user.avatar.file?) %>
+           <%= image_tag current_user.avatar.url %>
+         <% else %>
+           <%=image_tag("user-default.png", alt: "Example Image")%>
+         <% end %>
+       </div>
         <hr>
         <%= button_to "Edit Profile", user_registration_path, method: :patch %>
         <hr>
