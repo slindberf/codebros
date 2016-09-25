@@ -1,4 +1,10 @@
+
+
 <div class="body-registration-new">
+  <p class="logo-b">
+    <a class="logo-b" href="http://codebros.herokuapp.com/">Code<span>Bros</span>
+    </a>
+  </p>
     <div class="heading-session-new">
       <h1 class="login-heading">
         <strong>Welcome.</strong> Please register.</h1>
@@ -32,8 +38,9 @@
         </div>
 
         <div class="login-footer">
-          <%= f.submit "Sign up", class: "btn btn-blue btn--right" %>
+          
           <%= link_to "Log In", new_user_session_path, class: "btn btn-blue btn--right" %>
+          <%= f.submit "Sign up", class: "btn btn-blue btn--right" %>
         </div>
       <% end %>
       </div>
@@ -41,7 +48,10 @@
 </div> 
 
 
-
+<div class="error">
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+</div>
 
 
 

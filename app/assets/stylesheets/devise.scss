@@ -1,5 +1,17 @@
 ::-moz-selection { background: yellow; }
 ::selection { background: yellow; }
+
+/*Logo sign out*/
+.logo-b {
+  font-size:40px;
+  line-height:100px;
+  color: #10DDC2;
+  margin-left: 1em;
+}
+
+.logo-b span {
+  color: #f5f5f5;
+}
 /*Error message*/
 .error {
   position: absolute;
@@ -113,8 +125,12 @@
 .btn-blue {
   color: #15b7b9;
 }
+a.btn-blue {
+  border-left: 1px dotted;
+}
 .btn--left {
   float: left;
+  border-right: 1px dotted #15b7b9;
 }
 .btn--right {
   float: right;

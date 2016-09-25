@@ -88,7 +88,9 @@ a {
 .menu-user li, .menu-log-in li{
   float: left;
 }
-
+.menu-user li {
+  margin-left: 2em;
+}
 .menu-log-in {
   float: right;
 }
