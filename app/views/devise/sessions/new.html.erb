@@ -1,4 +1,4 @@
- <div class="body-session-new">
+<div class="body-session-new">
     <div class="heading-session-new">
       <h1 class="login-heading">
         <strong>Welcome.</strong> Please login.</h1>
@@ -17,8 +17,14 @@
           <%= f.check_box :remember_me %>
             <span class="icon">Remember me</span> 
           <% end -%>
-          <%= f.submit "Log in", class: "btn btn--right" %>
+          <%= f.submit "Log in", class: "btn btn-pink btn--right" %>
         </div>
       <% end %>
     </div>
 </div> 
+
+<div class="error">
+  <p class="notice"><%= notice %></p>
+  <p class="alert"><%= alert %></p>
+</div>
+

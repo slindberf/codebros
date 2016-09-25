@@ -1,33 +1,24 @@
-// /* Log-in Style */
-// .border-form-div {
-//   max-width: 300px;
-//   padding: 19px 29px 29px;
-//   margin: 0 auto 20px;
-//   background-color: #fff;
-//   border: 1px solid #e5e5e5;
-//   -webkit-border-radius: 5px;
-//      -moz-border-radius: 5px;
-//           border-radius: 5px;
-//   -webkit-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-//      -moz-box-shadow: 0 1px 2px rgba(0,0,0,.05);
-//           box-shadow: 0 1px 2px rgba(0,0,0,.05);
-// }
-// .border-form-div .form-signin-heading,
-// .border-form-div .checkbox {
-//   margin-bottom: 10px;
-// }
-// .border-form-div input[type="text"],
-// .border-form-div input[type="email"],
-// .border-form-div input[type="password"] {
-//   font-size: 16px;
-//   height: auto;
-//   margin-bottom: 15px;
-//   padding: 7px 9px;
-// }
-
-
+::-moz-selection { background: yellow; }
+::selection { background: yellow; }
+/*Error message*/
+.error {
+  position: absolute;
+  top: 520px;
+  right:48%;
+}
+.error p{
+  color: #fff;
+  font-size: 1.2em;
+  line-height: 3em; 
+}
+/*LOG IN*/
 .body-session-new {
   background-color: #f57170;
+  width:100%;
+  height: 100%;
+}
+.body-registration-new {
+  background-color: #15b7b9;
   width:100%;
   height: 100%;
 }
@@ -48,6 +39,7 @@
   color: white;
 }
 
+/*pink*/
 .input-txt {
   width: 100%;
   padding: 20px 10px;
@@ -74,20 +66,56 @@
   background-color: #B55453;
   outline-color: #FF908E;
 }
+/*blue*/
+.input-txt-blue {
+  width: 100%;
+  padding: 20px 10px;
+  background: #15b7b9;
+  border: none;
+  font-size: 1em;
+  color: white;
+  border-bottom: 1px dotted rgba(250, 250, 250, 0.4);
+  -moz-transition: background-color 0.5s ease-in-out;
+  -o-transition: background-color 0.5s ease-in-out;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
+}
+.input-txt-blue:-moz-placeholder {
+  color: #0F8586;
+}
+.input-txt-blue:-ms-input-placeholder {
+  color: #0F8586;
+}
+.input-txt-blue::-webkit-input-placeholder {
+  color: #0F8586;
+}
+.input-txt-blue:focus {
+  background-color: #0C6C6C;
+  outline-color: #40999A;
+}
 
+/**/
 .login-footer {
   margin: 10px 0;
   overflow: hidden;
   width: 100%;
 }
-
 .btn {
   padding: 15px 30px;
   border: none;
   background: white;
+  font-size: .8em;
+  line-height: 1.6em;
+}
+.btn-pink {
   color: #f57170;
 }
-
+.btn-blue {
+  color: #15b7b9;
+}
+.btn--left {
+  float: left;
+}
 .btn--right {
   float: right;
 }
@@ -99,6 +127,7 @@
   color: white;
 }
 
+/* SIGN UP*/
 
 
 
