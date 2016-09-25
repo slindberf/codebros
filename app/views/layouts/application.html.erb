@@ -10,7 +10,7 @@
 
   <body>
 
-    <%= yield %>
+    
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= render :partial => "site/header" %>
@@ -19,9 +19,9 @@
       <%= render :partial => "site/signed_in" %> 
     <% else %>
       <%= render :partial => "site/signed_out" %>
-      <%= render :partial => "site/home" %>
+      
     <% end %>
-
+    <%= yield %>
   </body>
 </html>
 
