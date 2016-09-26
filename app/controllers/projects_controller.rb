@@ -1,19 +1,14 @@
 class ProjectsController < ApplicationController
 
+  before_action :find_project, only: [:show, :destroy]
+
   def new
     @project = current_user.projects.new
     @project.members.build
   end
 
   def create
-
-    #PREGUNTAR
-    #cómo dejarlo con el create! devuelve
-
-    #hay que hacer create para que cree member (con new no se crea)
-    # binding.pry
     @project = current_user.projects.create project_params
-    #if @project.save
     if(@project)
       member = current_user.members.find_by(project_id: @project.id)
       member.edit_attr!('admin', params[:category])
@@ -25,7 +20,6 @@ class ProjectsController < ApplicationController
   end
 
   def show
-    @project = Project.find_by(id: params[:id])
     if (@project)
       admin = User.find_by(id: @project.members.where(role: 'admin').pluck(:user_id))
       @name = admin.name
@@ -45,8 +39,6 @@ class ProjectsController < ApplicationController
   end
 
   def destroy
-    @project = Project.find_by(id: params[:id])
-    #binding.pry
     member = current_user.members.find_by(project_id: @project.id)
     if(member)
       if member.admin?
@@ -61,7 +53,7 @@ class ProjectsController < ApplicationController
   end
 
   def index
-    @projects = current_user.admin_projects
+    @projects = current_user.admin_projects.paginate(:page => params[:page])
   end
 
   def index_all
@@ -70,11 +62,15 @@ class ProjectsController < ApplicationController
   end
 
   def index_participating
-    @projects = current_user.projects
+    @projects = current_user.projects.paginate(:page => params[:page])
   end
 
   private
     def project_params
       params.require(:project).permit(:project_type, :name, :purpose, :description)
+    end
+
+    def find_project
+      @project = Project.find_by(id: params[:id])
     end
 end
