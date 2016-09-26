@@ -1,0 +1,14 @@
+<% @projects.each do |project| %>
+<div class="project-all">
+  <p>Project: <%= project.project_type %></p>
+  <p>City: <%= current_user.city %></p>
+  <b>Name: <%= project.name %></b>
+  <p>Main purpose: <%= project.purpose %></p>
+  <p>Description: <%= project.description %></p>
+  <p>Description: <%= project.id %></p>
+  <%= link_to 'Show Project', show_project_path(project.id) %>
+  <hr>
+</div>
+<% end %>
+
+<%= will_paginate @projects %>
