@@ -17,6 +17,8 @@
    <%= link_to 'Show Project', show_project_path(project.id) %>
 </div>
 <% end %>
+
+<%= will_paginate @projects %>
 	<p>Manager: <%= current_user.name.capitalize %></p>
 
 </section>
