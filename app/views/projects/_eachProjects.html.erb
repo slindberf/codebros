@@ -1,14 +1,25 @@
-<% @projects.each do |project| %>
-<div class="project-all">
-  <p>Project: <%= project.project_type %></p>
-  <p>City: <%= current_user.city %></p>
-  <b>Name: <%= project.name %></b>
-  <p>Main purpose: <%= project.purpose %></p>
-  <p>Description: <%= project.description %></p>
-  <p>Description: <%= project.id %></p>
-  <%= link_to 'Show Project', show_project_path(project.id) %>
-  <hr>
-</div>
-<% end %>
+<div class="table-projects">
+	
+	<% @projects.each do |project| %>
+		<div class="one-project">
+			<div class="project-img">
+				<%= link_to "/projects/#{project.id}" do %>
+					<%= image_tag('project' + ((project.id%3)+1).to_s + '.png') %>
+				<% end %>
+			</div>
+			<div class="project-name">
+				<h4><%= project.name %></h4><span id="triangle-bottomleft"></span>
+			</div>
+		  <p>Type: <%= project.project_type %></p>
+		  <p>Main purpose: <%= project.purpose %></p>
+		</div>
+	<% end %>
 
-<%= will_paginate @projects %>
+</div>
+
+<div class="paginate">
+	<%= will_paginate @projects %>
+</div>
+
+
+

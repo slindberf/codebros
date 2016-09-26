@@ -28,14 +28,14 @@
 <section class='center white'>
 	<div class='row'>
 		<div class='col col-3'>
-			<div class=user-img> 
-           <%=image_tag("user-default.png", alt: "Example Image")%>
+			<div class=show-project-img> 
+           <%=image_tag("project#{@project.id%3 + 1}.png", alt: "Example Image")%>
        </div>
 		</div>
 		<div class='col col-6'>
 			<div class='project-wrapper'>
 				<h3><%=@project.project_type%></h3>
-				<p><%= current_user.city %></p>
+				<p><%= @admin.city %></p>
 		 		<p><%= @project.purpose %></p>
 		 		<div class='description'>
 		 			<p><%= @project.description %></p>
@@ -50,7 +50,7 @@
 				</p>
 				<div>
 					<img src="" alt="foto">
-					<p  class="typo"><%= @name %></p>
+					<p  class="typo"><%= @admin.name %></p>
 				</div>
 			</div>
 		</div>
@@ -67,15 +67,23 @@
 	<%= link_to 'Delete Project', destroy_project_path(@project.id), method: :delete %>
 <% elsif @role == 'future_member' %>
 
-	<button class="js-btn-apply" data-id="<%= @project.id %>">Apply</button>
-
 	<select  class="js-category">
     <option value='Back-end'>Back-end</option>
     <option value='Front-end'>Front-end</option>
     <option value='Full-stack'>Full-stack</option>
   </select>
 
+  <button class="js-btn-apply" data-id="<%= @project.id %>">Apply</button>
+
 <% else %>
+
+	<select  class="js-category" hidden="true">
+    <option value='Back-end'>Back-end</option>
+    <option value='Front-end'>Front-end</option>
+    <option value='Full-stack'>Full-stack</option>
+  </select>
+
 	<button class="js-btn-leave" data-id="<%= @project.id %>">Leave</button>
+
 <% end %>
 </div>

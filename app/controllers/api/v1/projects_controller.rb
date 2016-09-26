@@ -19,45 +19,44 @@ class Api::V1::ProjectsController < ApplicationController
     render json: projects
   end
 
-  def apply_project
-    
+  def apply
     project = Project.find_by(id: params[:id])
     if project
       if !(current_user.projects.find_by(id: project.id))
         project.add_user(current_user)
         member = current_user.members.find_by(project_id: project.id)
-        category =  params[:data]
-        member.edit_attr!('future_member', category)
+        category =  params[:category]
+        member.edit_attr!('candidate', category)
         #member creado a partir de apply (201)
-        render json: {error: 'hola'}, status: 200
+        render json: {error: 'ok'}, status: 200
       else
         #ya existe el member del usuario
-        render json: {error: 'hola'}, status: 400
+        render json: {error: 'ya eres member'}, status: 400
       end
     else
       #project no encontrado
-      render json: {error: 'hola'}, status: 404 
+      render json: {error: 'project not found'}, status: 404 
     end
   end
 
-  def leave_project
-    project = Project.find_by(id: params[:project_id])
+  def leave
+    project = Project.find_by(id: params[:id])
     if project
       member = current_user.members.find_by(project_id: project.id)
       if member
         if (member.admin?)
-          render status: 400
+          render json: {error: 'eres admin'}, status: 400
         else
           member.destroy
           #member eliminado
-          render status: 200
+          render json: {error: 'ok'}, status: 200
         end
       else
-        render status: 400
+        render json: {error: 'no eres member'}, status: 400
       end
     else
       #project no encontrado
-      render status: 404
+      render json: {error: 'project not found'}, status: 404
     end
   end
 

@@ -5,16 +5,11 @@
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application' %>
   </head>
 
   <body>
-
-  <% if current_page?(new_user_session_path) %>
-      
-  <% elsif current_page?(new_user_registration_path) %>
-      
-  <% elsif user_signed_in? %>
+  <% if user_signed_in? %>
     <header>
       <div class="wrapper-menu">
         <h1>
@@ -24,7 +19,7 @@
       <%= render :partial => "site/signed_in" %>
       </div>
     </header>
-  <% else %>
+  <% elsif current_page?(root_path) %>
     <header>
       <div class="wrapper-menu">
         <h1>

@@ -4,7 +4,7 @@ class Project < ApplicationRecord
 
 	# accepts_nested_attributes_for :members
 
-  self.per_page = 2
+  self.per_page = 6
 
   def add_user user
     self.users.push(user)

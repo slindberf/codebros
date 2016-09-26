@@ -26,8 +26,6 @@
 
         <div class="password">
           <% if @minimum_password_length %>
-          
-          
           <%= f.password_field :password, autocomplete: "off",class:"input-txt-blue", placeholder:" Password: #{@minimum_password_length} characters minimum" %>
           <% end %>
         </div>
@@ -42,16 +40,17 @@
           <%= link_to "Log In", new_user_session_path, class: "btn btn-blue btn--right" %>
           <%= f.submit "Sign up", class: "btn btn-blue btn--right" %>
         </div>
-      <% end %>
+
+        <% end %>
       </div>
     
 </div> 
 
 
-<div class="error">
+<!-- <div class="error">
   <p class="notice"><%= notice %></p>
   <p class="alert"><%= alert %></p>
-</div>
+</div> -->
 
 
 

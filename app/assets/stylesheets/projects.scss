@@ -3,23 +3,121 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 //-----------------  Style view show  --------------
+
+.show-project-img {
+	width: 300px;
+	height: 200px;
+	margin: 1% auto;
+}
+
+.show-project-img img{
+	width: 100%;
+	height: 100%;
+	border-radius: 3%;
+}
+
 .project-search-wrap {
     width: 100%;
     height: 60px;
     background-color: #15B7B9;  
 }
-.search-form {
-	line-height: 60px;
+
+.user-project-selection {
+	//width: ;
+	margin: 0 20%;
+	background-color: #15B7B9;
 }
-.search-txt:-moz-placeholder {
-  color: #15B7B9;
+
+.user-project-selection li{
+	  display: inline-block;
+    width: 19.51%;
+    line-height: 60px;
+    text-align: center
 }
-.search-txt:-ms-input-placeholder {
-  color: #15B7B9;
+
+.user-project-selection li {
+		border-right: 1px dotted #10ddc2;
 }
-.search-txt::-webkit-input-placeholder {
-  color: #15B7B9;
+
+.user-project-selection ul li:first-child {
+		border-left: 1px dotted #10ddc2;
 }
+
+.user-project-selection a{
+	  color: #fff;
+	  font-size: 1.2em;
+}
+
+.user-project-selection a:hover{
+	  color: #10ddc2;
+}
+
+.table-projects {
+	width: 80%;
+	margin: 0 auto;
+}
+
+.one-project {
+
+	width: 33%;
+  display: inline-table;
+  margin: 10px 0;
+}
+
+.one-project p {
+  margin: 2% 20%;
+  font-size: 1.2em;
+}
+
+.project-name {
+	margin: 3% auto;
+  height: 40px;
+  width: 300px;
+  max-width: 300px;
+}
+
+.project-name h4 {
+  padding: 2% 19% 2% 2%;
+  background-color: #10ddc2;
+  font-size: 1.3em;
+  display: inline-block;
+  line-height: 35px;
+}
+
+#triangle-bottomleft {
+  width: 0;
+  height: 0;
+  border-top: 47px solid #10ddc2;
+  border-right: 55px solid transparent;
+  position: absolute;
+}
+
+.project-img {
+	margin: 0 auto;
+	width: 300px;
+  height: 200px;
+}
+
+.project-img img {
+	width: 100%;
+	height: 100%;
+	border-radius: 15px;
+  border: 1px solid #000;
+}
+
+.paginate {
+	color: #15B7B9;
+  text-align: center;
+  line-height: 2em;
+  font-size: 1.2em;
+}
+
+.paginate a{
+	color: #10ddc2;
+}
+
+
+
 
 
 
