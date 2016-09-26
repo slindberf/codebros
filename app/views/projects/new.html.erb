@@ -25,10 +25,7 @@
     <%= f.text_area :description %>
     <!-- para cambiar tamaño size: '30x50' columns and row -->
   </div>
-  <div class="field">
-    <%= f.label :avatar %><br />
-    <%= f.file_field :avatar %>
-  </div>
+
   <div class="field">
     <%= label_tag :category %><br />
     <%= select_tag(:category,options_for_select([['Back-end', 'Back-end'], ['Front-end', 'Front-end'], ['Full-stack','Full-stack']]) ) %>
