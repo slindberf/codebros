@@ -65,42 +65,12 @@ class ProjectsController < ApplicationController
   end
 
   def index_all
-    @projects = Project.all
+    @projects = Project.paginate(:page => params[:page])
+    #@projects = Project.all
   end
 
   def index_participating
     @projects = current_user.projects
-  end
-
-  def add_user_to_project
-    @project = Project.find_by(id: params[:project_id])
-    if(!(current_user.projects.find_by(id: @project.id)))
-      @project.add_user(current_user)
-      member = current_user.members.find_by(project_id: @project.id)
-      #hay que añadir el campo select 
-      #'in process'
-      member.edit_attr!('participating', 'Full-stack')
-      flash[:notice] = "Your request has been sent to the admin's project."
-    else
-      flash[:alert] = "You have already applied to this project."
-    end
-    redirect_to show_project_path(@project.id)
-  end
-
-  def leave_project
-    @project = Project.find_by(id: params[:project_id])
-    if(current_user.projects.find_by(id: @project.id))
-      member = current_user.members.find_by(project_id: @project.id)
-      if (member.admin?)
-        flash[:alert] = "To delete a project you must click the delete button."
-      else
-        member.destroy
-        flash[:notice] = "You have left from this project."
-      end
-    else
-      flash[:alert] = "You can't leave this project. Do you want to participate? Apply to the project."
-    end
-    redirect_to show_project_path(@project.id)
   end
 
   private

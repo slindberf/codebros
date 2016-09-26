@@ -28,10 +28,6 @@ Rails.application.routes.draw do
 
   post 'projects/create', to: 'projects#create', as: 'create_project'
 
-  get 'projects/:project_id/leave', to: 'projects#leave_project', as: 'leave_project'
-
-  get 'projects/:project_id/apply', to: 'projects#add_user_to_project', as: 'apply_project'
-
   delete 'projects/:id', to: 'projects#destroy', as: 'destroy_project'
 
   get 'projects/index'

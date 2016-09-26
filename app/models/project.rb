@@ -6,6 +6,8 @@ class Project < ApplicationRecord
   validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\z/
   # accepts_nested_attributes_for :members
 
+  self.per_page = 2
+
   def add_user user
     self.users.push(user)
   end
