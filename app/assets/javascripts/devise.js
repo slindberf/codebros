@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function(event){
 });
 
 function onclickAddSkill(e){
-	e.preventDefault;
+	e.preventDefault();
 	var skill = input.value;
 	skills.push(skill);
 	input.value = "";
@@ -31,7 +31,7 @@ function printSkills(skill){
 };
 
 function submitEdit(e){
-	e.preventDefault;
+	e.preventDefault();
 	input.value = skills;
 	console.log('makna');
 	this.submit();

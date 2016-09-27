@@ -1,0 +1,893 @@
+/* line 1, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/devise.scss */
+::-moz-selection {
+  background: yellow;
+}
+
+/* line 2, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/devise.scss */
+::selection {
+  background: yellow;
+}
+
+/*Logo sign out*/
+/* line 5, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/devise.scss */
+.logo-b {
+  font-size: 40px;
+  line-height: 100px;
+  color: #10DDC2;
+  margin-left: 1em;
+}
+
+/* line 12, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/devise.scss */
+.logo-b span {
+  color: #f5f5f5;
+}
+
+/*Error message*/
+/* line 16, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/devise.scss */
+.error {
+  position: absolute;
+  top: 520px;
+  right: 48%;
+}
+
+/* line 21, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/devise.scss */
+.error p {
+  color: #fff;
+  font-size: 1.2em;
+  line-height: 3em;
+}
+
+/*LOG IN*/
+/* line 27, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/devise.scss */
+.body-session-new {
+  background-color: #f57170;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 32, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/devise.scss */
+.body-registration-new {
+  background-color: #15b7b9;
+  height: 100%;
+}
+
+/* line 38, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/devise.scss */
+.login {
+  margin: 0 auto;
+  width: 450px;
+}
+
+/* line 42, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/devise.scss */
+.heading-session-new {
+  margin: 0 auto;
+  width: 450px;
+  height: 48px;
+}
+
+/* line 48, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/devise.scss */
+.login-heading {
+  padding-top: 2em;
+  font: 1.8em/48px sans-serif;
+  color: white;
+}
+
+/*pink*/
+/* line 55, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/devise.scss */
+.input-txt {
+  width: 100%;
+  padding: 20px 10px;
+  background: #f57170;
+  border: none;
+  font-size: 1em;
+  color: white;
+  border-bottom: 1px dotted rgba(250, 250, 250, 0.4);
+  -moz-transition: background-color 0.5s ease-in-out;
+  -o-transition: background-color 0.5s ease-in-out;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
+}
+
+/* line 68, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/devise.scss */
+.input-txt:-moz-placeholder {
+  color: #FF8F8E;
+}
+
+/* line 71, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/devise.scss */
+.input-txt:-ms-input-placeholder {
+  color: #FF8F8E;
+}
+
+/* line 74, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/devise.scss */
+.input-txt::-webkit-input-placeholder {
+  color: #FF8F8E;
+}
+
+/* line 77, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/devise.scss */
+.input-txt:focus {
+  background-color: #B55453;
+  outline-color: #FF908E;
+}
+
+/* line 81, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/devise.scss */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+}
+
+/*blue*/
+/* line 85, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/devise.scss */
+.input-txt-blue {
+  width: 100%;
+  padding: 20px 10px;
+  background: #15b7b9;
+  border: none;
+  font-size: 1em;
+  color: white;
+  border-bottom: 1px dotted rgba(250, 250, 250, 0.4);
+  -moz-transition: background-color 0.5s ease-in-out;
+  -o-transition: background-color 0.5s ease-in-out;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
+}
+
+/* line 98, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/devise.scss */
+.input-txt-blue:-moz-placeholder {
+  color: #0F8586;
+}
+
+/* line 101, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/devise.scss */
+.input-txt-blue:-ms-input-placeholder {
+  color: #0F8586;
+}
+
+/* line 104, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/devise.scss */
+.input-txt-blue::-webkit-input-placeholder {
+  color: #0F8586;
+}
+
+/* line 107, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/devise.scss */
+.input-txt-blue:focus {
+  background-color: #0C6C6C;
+  outline-color: #40999A;
+}
+
+/**/
+/* line 113, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/devise.scss */
+.login-footer {
+  margin: 10px 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* line 118, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/devise.scss */
+.btn {
+  padding: 15px 30px;
+  border: none;
+  background: white;
+  font-size: .8em;
+  line-height: 1.6em;
+}
+
+/* line 125, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/devise.scss */
+.btn-pink {
+  color: #f57170;
+}
+
+/* line 128, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/devise.scss */
+.btn-blue {
+  color: #15b7b9;
+}
+
+/* line 131, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/devise.scss */
+a.btn-blue {
+  border-left: 1px dotted;
+}
+
+/* line 134, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/devise.scss */
+.btn--left {
+  float: left;
+  border-right: 1px dotted #15b7b9;
+}
+
+/* line 138, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/devise.scss */
+.btn--right {
+  float: right;
+}
+
+/* line 142, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/devise.scss */
+.icon {
+  display: inline-block;
+  font-size: .8em;
+  line-height: 3em;
+  color: white;
+}
+
+/* SIGN UP*/
+.blue{
+  background-color: aquamarine;
+}
+
+.white{
+  background-color: #fff;
+}
+
+.center {
+  margin: 0 auto;
+  width: 80%;
+  
+}
+
+.project-wrapper p{
+  margin: 0.5em 0;
+}
+
+.row{
+    width: 100%;
+    margin:  0 auto;
+    overflow: hidden;
+}
+
+/*Retícula 12Columns*/
+.col{
+   /*margin-right: 1%;*/
+   width: 100%;
+   min-height: 1em;
+/*   background: #cecece;*/
+   float: left;
+   /*margin-top: 1%;*/
+   word-break: break-all;
+}
+
+.col:last-child{
+    margin-right: 0;
+}
+
+
+.col-1{ 
+    
+    width: 8.33%;
+}
+.col-2{ 
+    width: 16.66%;
+}
+.col-3{ 
+    width: 25%;
+}
+.col-4{ 
+    width: 33.33%;
+}
+.col-5{
+    width: 41.66%;
+}
+.col-6{
+    width: 50%;
+}
+.col-7{
+    width: 58.33%;
+}
+.col-8{
+    width: 66.66%;
+}
+.col-9{
+    width: 75%;
+}
+.col-10{
+    width: 83.33%;
+}
+.col-11{
+    width: 91.66%;
+}
+.col-12{
+    width: 100%;
+}
+
+
+@media all and (max-width:600px){
+    .col{
+        width: 100%;
+        margin-right: 0;
+        min-height: 50px;
+        border-bottom: 1px solid black;
+    }
+}
+/* line 7, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/projects.scss */
+.show-project-img {
+  width: 300px;
+  height: 200px;
+  margin: 1% auto;
+}
+
+/* line 13, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/projects.scss */
+.show-project-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 3%;
+}
+
+/* line 19, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/projects.scss */
+.project-search-wrap {
+  width: 100%;
+  height: 65px;
+  background-color: #15B7B9;
+}
+
+/* line 25, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/projects.scss */
+.user-project-selection {
+  width: 60%;
+  margin: 0 20%;
+  background-color: #15B7B9;
+}
+
+/* line 31, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/projects.scss */
+.user-project-selection li {
+  display: inline-block;
+  width: 19.3%;
+  line-height: 65px;
+  text-align: center;
+}
+
+/* line 38, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/projects.scss */
+.user-project-selection li {
+  border-right: 1px dotted #10ddc2;
+}
+
+/* line 42, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/projects.scss */
+.user-project-selection ul li:first-child {
+  border-left: 1px dotted #10ddc2;
+}
+
+/* line 46, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/projects.scss */
+.user-project-selection a {
+  color: #fff;
+  font-size: 1.1em;
+}
+
+/* line 51, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/projects.scss */
+.user-project-selection a:hover {
+  color: #10ddc2;
+}
+
+/* line 55, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/projects.scss */
+.table-projects {
+  width: 80%;
+  margin: 0 auto;
+}
+
+/* line 60, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/projects.scss */
+.one-project {
+  width: 33%;
+  display: inline-table;
+  margin: 10px 0;
+}
+
+/* line 67, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/projects.scss */
+.one-project p {
+  margin: 2% 20%;
+  font-size: 1.2em;
+}
+
+/* line 72, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/projects.scss */
+.project-name {
+  margin: 3% auto;
+  height: 40px;
+  width: 300px;
+  max-width: 300px;
+}
+
+/* line 79, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/projects.scss */
+.project-name h4 {
+  padding: 2% 19% 2% 2%;
+  background-color: #10ddc2;
+  font-size: 1.3em;
+  display: inline-block;
+  line-height: 35px;
+}
+
+/* line 87, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/projects.scss */
+#triangle-bottomleft {
+  width: 0;
+  height: 0;
+  border-top: 47px solid #10ddc2;
+  border-right: 55px solid transparent;
+  position: absolute;
+}
+
+/* line 95, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/projects.scss */
+.project-img {
+  margin: 0 auto;
+  width: 300px;
+  height: 200px;
+}
+
+/* line 101, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/projects.scss */
+.project-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 15px;
+  border: 1px solid #000;
+}
+
+/* line 108, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/projects.scss */
+.paginate {
+  color: #15B7B9;
+  text-align: center;
+  line-height: 2em;
+  font-size: 1.2em;
+}
+
+/* line 115, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/projects.scss */
+.paginate a {
+  color: #10ddc2;
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/********************************banner*/
+/* line 8, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/site.scss */
+.banner-coding {
+  width: 100%;
+  background: #f57170;
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 14, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/site.scss */
+.banner-design {
+  width: 100%;
+  background: #10ddc2;
+  overflow: hidden;
+  position: relative;
+}
+
+/* line 20, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/site.scss */
+.b_share {
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 26, 44, 0.1);
+}
+
+/* line 24, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/site.scss */
+.banner-projects {
+  width: 100%;
+  height: 470px;
+  background: url("computer.png") no-repeat top;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* line 34, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/site.scss */
+.lettering {
+  display: table;
+  width: 100%;
+  height: 350px;
+}
+
+/* line 40, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/site.scss */
+.lettering-right {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* line 45, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/site.scss */
+.banner-projects p {
+  color: #fff;
+  font-size: 1em;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.54);
+}
+
+/* line 50, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/site.scss */
+.banner-projects .lettering h2 {
+  font-size: 3em;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.54);
+}
+
+/* line 57, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/site.scss */
+.lettering h2 span {
+  color: #15b7b9;
+}
+
+/* line 61, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/site.scss */
+.banner-wrapper {
+  margin: 0 auto;
+  max-width: 1200px;
+  overflow: hidden;
+}
+
+/* line 66, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/site.scss */
+.coding-description {
+  display: table;
+  float: left;
+  height: 348px;
+  width: 50%;
+}
+
+/* line 73, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/site.scss */
+article {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* line 79, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/site.scss */
+.coding-description h3,
+.banner-description-share h3 {
+  padding-bottom: 1em;
+  font-size: 2em;
+}
+
+/* line 85, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/site.scss */
+.coding-description p,
+.banner-description-share p {
+  width: 400px;
+  margin-left: 6em;
+}
+
+/* line 91, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/site.scss */
+.coding-description h3,
+.coding-description p {
+  color: #fff;
+}
+
+/* line 95, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/site.scss */
+.coding-img {
+  float: right;
+  width: 50%;
+}
+
+/* line 99, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/site.scss */
+.coding-img img,
+.banner-img-share img {
+  width: 100%;
+}
+
+/* line 104, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/site.scss */
+.banner-img-share {
+  float: left;
+  width: 50%;
+}
+
+/* line 109, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/site.scss */
+.banner-description-share {
+  display: table;
+  float: right;
+  height: 348px;
+  width: 50%;
+}
+
+/* line 116, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/site.scss */
+.banner-description-share h3,
+.banner-description-share p {
+  color: #808080;
+}
+
+/* line 121, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/site.scss */
+.projects h3 {
+  color: #5a5050;
+  font-size: 40px;
+  line-height: 50px;
+  margin-bottom: 71px;
+  margin-top: 80px;
+  text-align: center;
+}
+
+/* line 129, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/site.scss */
+.projects .container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* line 134, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/site.scss */
+.container {
+  width: 1200px;
+  margin-right: auto;
+  margin-left: auto;
+}
+
+/* line 139, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/site.scss */
+.container:before, .container:after {
+  content: " ";
+  display: table;
+}
+
+/* line 143, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/site.scss */
+.container:after {
+  clear: both;
+}
+
+/* line 147, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/site.scss */
+.text-center {
+  text-align: center;
+}
+/* line 5, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/users.scss */
+.user-img {
+  height: 150px;
+  width: 150px;
+  margin: 1em auto;
+}
+
+/* line 11, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/users.scss */
+.user-img img {
+  width: 100%;
+  height: 100%;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+/* User sign in and sign forms. */
+/* line 24, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/application.css.scss */
+html, body {
+  height: 100%;
+}
+
+/* line 27, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/application.css.scss */
+body {
+  color: #3e3e3e;
+  background: #f5f5f5;
+  font-size: 18px;
+  font-family: sans-serif;
+}
+
+/* line 33, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/application.css.scss */
+ul li {
+  list-style: none;
+}
+
+/* line 36, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/application.css.scss */
+a {
+  text-decoration: none;
+}
+
+/* line 40, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/application.css.scss */
+header {
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 26, 44, 0.1);
+  margin-top: 0;
+  min-height: 70px;
+  overflow: hidden;
+  width: 100%;
+}
+
+/*Logo*/
+/* line 52, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/application.css.scss */
+h1 {
+  float: left;
+  font-size: 40px;
+  line-height: 100px;
+}
+
+/* line 57, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/application.css.scss */
+h1 a {
+  color: #10DDC2;
+}
+
+/* line 60, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/application.css.scss */
+h1 a span {
+  color: #15B7B9;
+}
+
+/* line 64, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/application.css.scss */
+a {
+  text-decoration: none;
+}
+
+/*Menu*/
+/* line 70, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/application.css.scss */
+.menu-user {
+  float: left;
+  padding-left: 50px;
+}
+
+/* line 75, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/application.css.scss */
+.wrapper-menu {
+  margin: 0 auto;
+  max-width: 1200px;
+  overflow: hidden;
+}
+
+/* line 81, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/application.css.scss */
+.menu-user {
+  margin-left: 8em;
+}
+
+/* line 84, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/application.css.scss */
+.menu-user, .menu-log-in {
+  position: relative;
+  line-height: 100px;
+}
+
+/* line 89, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/application.css.scss */
+.menu-user li, .menu-log-in li {
+  float: left;
+}
+
+/* line 92, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/application.css.scss */
+.menu-user li {
+  margin-left: 2em;
+}
+
+/* line 95, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/application.css.scss */
+.menu-log-in {
+  float: right;
+}
+
+/* line 99, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/application.css.scss */
+.menu-log-in ul {
+  overflow: hidden;
+}
+
+/* line 103, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/application.css.scss */
+.border {
+  border-right: 1px solid #10DDC2;
+}
+
+/* line 106, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/application.css.scss */
+.menu-user a, .menu-log-in a {
+  color: #5a5050;
+  padding: 10px 20px;
+  line-height: normal;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+/* line 114, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/application.css.scss */
+.menu-user a:hover, .menu-log-in a:hover {
+  color: #10DDC2;
+}
+
+/* line 118, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/application.css.scss */
+.avatar-user {
+  position: absolute;
+  top: 25px;
+  right: 59px;
+  width: 45px;
+  height: 45px;
+  border-radius: 45px;
+}
+
+/* Log-in Style */
+/* line 128, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/application.css.scss */
+.border-form-div {
+  max-width: 300px;
+  padding: 19px 29px 29px;
+  margin: 0 auto 20px;
+  background-color: #fff;
+  border: 1px solid #e5e5e5;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* line 141, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/application.css.scss */
+.border-form-div .form-signin-heading,
+.border-form-div .checkbox {
+  margin-bottom: 10px;
+}
+
+/* line 145, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/application.css.scss */
+.border-form-div input[type="text"],
+.border-form-div input[type="email"],
+.border-form-div input[type="password"] {
+  font-size: 16px;
+  height: auto;
+  margin-bottom: 15px;
+  padding: 7px 9px;
+}
+
+/*media queries*/
+@media all and (max-width: 750px) {
+  /* line 156, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/application.css.scss */
+  .col {
+    width: 100%;
+    margin-right: 0;
+    min-height: 50px;
+    border-bottom: 1px solid black;
+  }
+
+  /* line 162, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/application.css.scss */
+  header .logo {
+    font-size: 50px;
+  }
+
+  /* line 165, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/application.css.scss */
+  .logo-a {
+    margin-left: 30px;
+  }
+
+  /* line 168, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/application.css.scss */
+  header button {
+    display: block;
+  }
+
+  /* line 171, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/application.css.scss */
+  .menu-user {
+    display: block;
+  }
+
+  /* line 174, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/application.css.scss */
+  .menu-user {
+    width: 100%;
+  }
+
+  /* line 177, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/application.css.scss */
+  .menu-user a {
+    float: left;
+    width: 100%;
+    text-align: center;
+  }
+
+  /* line 182, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/application.css.scss */
+  .menu-user a:last-child {
+    border-left: none;
+  }
+}
+@media all and (max-width: 830px) {
+  /* line 189, /Users/rocio/Desktop/FinalProject/codebros/app/assets/stylesheets/application.css.scss */
+  .menu-user a:nth-child(3n) {
+    margin-right: 0em;
+  }
+}
