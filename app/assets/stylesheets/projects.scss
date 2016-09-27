@@ -18,20 +18,20 @@
 
 .project-search-wrap {
     width: 100%;
-    height: 60px;
+    height: 65px;
     background-color: #15B7B9;  
 }
 
 .user-project-selection {
-	//width: ;
+	width: 60%;
 	margin: 0 20%;
 	background-color: #15B7B9;
 }
 
 .user-project-selection li{
 	  display: inline-block;
-    width: 19.51%;
-    line-height: 60px;
+    width: 19.3%;
+    line-height: 65px;
     text-align: center
 }
 
@@ -45,7 +45,7 @@
 
 .user-project-selection a{
 	  color: #fff;
-	  font-size: 1.2em;
+	  font-size: 1.1em;
 }
 
 .user-project-selection a:hover{
