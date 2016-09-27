@@ -1,4 +1,4 @@
-<style>
+<!-- <style>
 .typo {
 /*  font-family: "Courier";*/
   font-size: 20px;
@@ -14,76 +14,91 @@
 /*  50%{width: 0;}
   100%{ width: 50; }*/ 
 }
-</style>
+</style> -->
 
-<div class="row blue">
-	<div class='col col-3'></div>
-	<div class='col col-6'>
-		<h2  class="typo"><%=@project.name%></h2>
-	</div>
-	<div class='col col-3'></div>
+<%= render :partial => "projects/nav_projects" %>
+
+<div class="info-project">
+  <div class="info-img">
+    <div class="info-project-img">
+      <%=image_tag("project#{@project.id%3 + 1}.png", alt: "Example Image")%>
+    </div>
+    <p><%= @project.name %></p>
+  </div>
+  <div class="info-text">
+    <p><%= @admin.city %></p>
+    <p><%=@project.project_type%></p>
+    <p><%= @project.purpose %></p>
+    <p><%= @project.description %></p>
+  </div>
+  <div class="info-admin">
+    <p>*</p>
+    <div class="info-admin-img">
+      <%=image_tag("user-default.png", alt: "Example Image")%>
+    </div>
+    <p>Admin</p>
+    <p><%= @admin.name%></p>
+  </div>
 </div>
 
-		
-<section class='center white'>
-	<div class='row'>
-		<div class='col col-3'>
-			<div class=show-project-img> 
-           <%=image_tag("project#{@project.id%3 + 1}.png", alt: "Example Image")%>
-       </div>
-		</div>
-		<div class='col col-6'>
-			<div class='project-wrapper'>
-				<h3><%=@project.project_type%></h3>
-				<p><%= @admin.city %></p>
-		 		<p><%= @project.purpose %></p>
-		 		<div class='description'>
-		 			<p><%= @project.description %></p>
-		 		</div>
-			</div>
-		</div>
-		<div class='col col-3'>
-			<div class='admin'>
-				<p>
-					<span>*</span>
-					Admin:
-				</p>
-				<div>
-					<img src="" alt="foto">
-					<p  class="typo"><%= @admin.name %></p>
-				</div>
-			</div>
-		</div>
-	</div>
+<!-- Línea separación -->
 
-</section>
+<div class="separator"><span> Looking for </span></div>
 
-<!-- 
-<%= @project.inspect %>
- -->
-	<p>Logueada <%= current_user.name.capitalize %></p>
-<div class="js-container-options">
-<% if @role == 'admin' %>
-	<%= link_to 'Delete Project', destroy_project_path(@project.id), method: :delete %>
-<% elsif @role == 'future_member' %>
 
-	<select  class="js-category">
-    <option value='Back-end'>Back-end</option>
-    <option value='Front-end'>Front-end</option>
-    <option value='Full-stack'>Full-stack</option>
-  </select>
+<div class="container-looking">
+  <div class="looking-img">
+    <%=image_tag("css3.png", alt: "Example Image")%>
+    <p>CSS</p>
+  </div>
+  <div class="looking-img">
+    <%=image_tag("ruby.png", alt: "Example Image")%>
+    <p>Ruby</p>
+  </div>
+  <div class="looking-img">
+    <%=image_tag("js.png", alt: "Example Image")%>
+    <p>JS</p>
+  </div>
+</div>
 
-  <button class="js-btn-apply" data-id="<%= @project.id %>">Apply</button>
+<!-- Línea separación -->
 
-<% else %>
+<div class="separator"><span> Members </span></div>
 
-	<select  class="js-category" hidden="true">
-    <option value='Back-end'>Back-end</option>
-    <option value='Front-end'>Front-end</option>
-    <option value='Full-stack'>Full-stack</option>
-  </select>
+<div class="members-project">
+  <% @users.each do |user| %>
+    <div class="member">
+        <%=image_tag("user-default.png", alt: "Example Image")%>
+        <p><%= user.name %></p>
+    </div>
+  <% end %>
+</div>
 
-	<button class="js-btn-leave" data-id="<%= @project.id %>">Leave</button>
+<div class="box-separator"></div>
 
-<% end %>
+
+<div class="options js-container-options">
+  <% if @role == 'admin' %>
+    <%= link_to 'Delete Project', destroy_project_path(@project.id), method: :delete %>
+  <% elsif @role == 'future_member' %>
+
+    <select  class="js-category" style="display: inline-block;">
+      <option value='Back-end'>Back-end</option>
+      <option value='Front-end'>Front-end</option>
+      <option value='Full-stack'>Full-stack</option>
+    </select>
+    <a href="#" class="js-btn-apply" data-id="<%= @project.id %>">Apply</a>
+    <a href="#" class="js-btn-leave" data-id="<%= @project.id %>" style="display:none;">Leave</a>
+
+  <% else %>
+
+    <select  class="js-category" style="display: none;">
+      <option value='Back-end'>Back-end</option>
+      <option value='Front-end'>Front-end</option>
+      <option value='Full-stack'>Full-stack</option>
+    </select>
+    <a href="#" class="js-btn-apply" data-id="<%= @project.id %>" style="display:none;">Apply</a>
+    <a href="#" class="js-btn-leave" data-id="<%= @project.id %>">Leave</a>
+
+  <% end %>
 </div>

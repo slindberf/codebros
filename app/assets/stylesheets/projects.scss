@@ -2,19 +2,7 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-//-----------------  Style view show  --------------
-
-.show-project-img {
-	width: 300px;
-	height: 200px;
-	margin: 1% auto;
-}
-
-.show-project-img img{
-	width: 100%;
-	height: 100%;
-	border-radius: 3%;
-}
+//----------------------Style navbar projects ----------------
 
 .project-search-wrap {
     width: 100%;
@@ -25,7 +13,6 @@
 .user-project-selection {
 	width: 60%;
 	margin: 0 20%;
-	background-color: #15B7B9;
 }
 
 .user-project-selection li{
@@ -52,47 +39,49 @@
 	  color: #10ddc2;
 }
 
+//-----------------  Style view index projects  --------------
+
 .table-projects {
 	width: 70%;
-	margin: 0 auto;
+	margin: 3% auto 0;
 }
 
 .one-project {
 	width: 33%;
   display: inline-table;
-  margin: 2% 0;
+  margin-top: 2%;
 }
 
 .one-project p {
-  margin: 2% 20%;
-  font-size: 1.2em;
+  margin: 3% 14%;
+  font-size: 1em;
 }
 
 .project-name {
-	margin: 3% auto;
-  height: 40px;
-  width: 90%;
+	margin: 1% auto;
+  height: 30px;
+  width: 80%;
   max-width: 90%;
 }
 
 .project-name h4 {
   padding: 2% 19% 2% 2%;
   background-color: #10ddc2;
-  font-size: 1.3em;
+  font-size: 1.1em;
   display: inline-block;
-  line-height: 35px;
+  line-height: 25px;
 }
 
 #triangle-bottomleft {
   width: 0;
   height: 0;
-  border-top: 47px solid #10ddc2;
+  border-top: 35px solid #10ddc2;
   border-right: 55px solid transparent;
   position: absolute;
 }
 
 .project-img {
-	margin: 5% auto 0;
+	margin: 0 auto;
 	width: 80%;
 }
 
@@ -115,7 +104,139 @@
 }
 
 
+// ----------------------- Show Project View -------------
 
+.info-project {
+  width: 90%;
+  margin: 3% auto;
+}
+
+.info-img {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+}
+
+.info-project-img {
+  width: 90%;
+  margin: 0 auto; 
+}
+
+.info-project-img img{
+  border-radius: 4%;
+  width: 100%;
+}
+
+.info-img p{
+  text-align: center;
+  font-size: 1.2em;
+}
+
+.info-text {
+  display: inline-block;
+  width: 49%;
+  font-size: 1em;
+  vertical-align: top;
+}
+
+.info-text p:last-child{
+  font-size: 0.9em;
+}
+
+.info-text p:first-child {
+  color: #15B7B9;
+  text-align: right;
+}
+
+.info-admin {
+  display: inline-block;
+  vertical-align: top;
+  width: 20%;
+}
+
+.info-admin p {
+  text-align: center;
+}
+
+.info-admin-img {
+  margin: 0 auto;
+  width: 60%;
+}
+
+.info-admin-img img {
+  border-radius: 50%;
+  width: 100%;
+}
+
+.separator {
+  width: 90%;
+  margin: 0 auto;
+  border-bottom: 1px dotted #10ddc2;
+  position: relative;
+}
+
+.separator span{
+  padding: 0 10px;
+  color: #10ddc2;
+  background-color: #f5f5f5;
+  display: block;
+  position: absolute;
+  top: -9px;
+  right: 46%;
+}
+
+.container-looking {
+  width: 40%;
+  margin: 3% auto;
+}
+
+.looking-img {
+  display: inline-block;
+  width: 10%;
+  margin: 0 11%;
+  text-align: center;
+}
+
+.looking-img img {
+  width: 100%;
+}
+
+.members-project {
+  width: 40%; 
+  margin: 3% auto;
+}
+
+.member {
+  display: inline-block;
+  width: 20%;
+  margin: 0 6.6%;
+  text-align: center;
+}
+
+.member img {
+  width: 100%;
+  border-radius: 50%;
+}
+
+.box-separator {
+  width: 100%;
+  height: 30px;
+  background-color: #15B7B9;
+}
+
+.options {
+  position: relative;
+  width: 90%;
+  margin: 3% auto;
+}
+
+.options a {
+  position: absolute;
+  right: 0;
+  color: #fff;
+  padding: 1%;
+  background-color: #F57170;
+}
 
 
 

@@ -71,29 +71,44 @@ function onclickLeave(event){
 function showLeave(response){
 	//no funciona el if(response.status === 200)
 	console.log('hola')
-	var btnApply = document.getElementsByClassName('js-btn-apply')[0];
-	var idProject = btnApply.getAttribute('data-id');
-	category.setAttribute('hidden', 'true');
-	var btn = document.createElement("button");
-	var text = document.createTextNode('Leave');
-	btn.appendChild(text);
-	btn.classList.add('js-btn-leave');
-	btn.setAttribute('data-id', idProject);
-	container.appendChild(btn);
-	container.removeChild(btnApply); 
+	btnApply.setAttribute('style', 'display: none');
+	category.setAttribute('style', 'display: none');
+	btnLeave.setAttribute('style', 'display: block'); 
 };
 
 function showApply(response){
 	console.log('hola')
-	var btnLeave = document.getElementsByClassName('js-btn-leave')[0];
-	var idProject = btnLeave.getAttribute('data-id');
-	category.removeAttribute('hidden');
-	var btn = document.createElement("button");
-	var text = document.createTextNode('Apply');
-	btn.appendChild(text);
-	btn.classList.add('js-btn-apply');
-	btn.setAttribute('data-id', idProject);
-	container.appendChild(btn);
-	container.removeChild(btnLeave); 
+	btnLeave.setAttribute('style', 'display: none');
+	category.setAttribute('style', 'display: inline-block');
+	btnApply.setAttribute('style', 'display: block');
 };
+
+// function showLeave(response){
+// 	//no funciona el if(response.status === 200)
+// 	console.log('hola')
+// 	var btnApply = document.getElementsByClassName('js-btn-apply')[0];
+// 	var idProject = btnApply.getAttribute('data-id');
+// 	category.setAttribute('hidden', 'true');
+// 	var btn = document.createElement("button");
+// 	var text = document.createTextNode('Leave');
+// 	btn.appendChild(text);
+// 	btn.classList.add('js-btn-leave');
+// 	btn.setAttribute('data-id', idProject);
+// 	container.appendChild(btn);
+// 	container.removeChild(btnApply); 
+// };
+
+// function showApply(response){
+// 	console.log('hola')
+// 	var btnLeave = document.getElementsByClassName('js-btn-leave')[0];
+// 	var idProject = btnLeave.getAttribute('data-id');
+// 	category.removeAttribute('hidden');
+// 	var btn = document.createElement("button");
+// 	var text = document.createTextNode('Apply');
+// 	btn.appendChild(text);
+// 	btn.classList.add('js-btn-apply');
+// 	btn.setAttribute('data-id', idProject);
+// 	container.appendChild(btn);
+// 	container.removeChild(btnLeave); 
+// };
 

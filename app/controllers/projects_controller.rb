@@ -22,7 +22,8 @@ class ProjectsController < ApplicationController
   def show
     if (@project)
       @admin = User.find_by(id: @project.members.where(role: 'admin').pluck(:user_id))
-      member = current_user.members.find_by(project_id: @project.id) 
+      member = current_user.members.find_by(project_id: @project.id)
+      @users = @project.users 
       if !member 
         @role = 'future_member' #apply
       elsif current_user == @admin
