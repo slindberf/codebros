@@ -1,11 +1,10 @@
 var list = "";
-var formEdit;
+var formEdit, input, skills = [];
 document.addEventListener('DOMContentLoaded', function(event){
 		var btn = document.getElementsByClassName('js-add-skill')[0];
-		var input = document.getElementsByClassName('js-skill')[0];
+		input = document.getElementsByClassName('js-skill')[0];
 		list = document.getElementsByClassName('added-skills')[0];
 		formEdit = document.getElementsByClassName('edit_user')[0];
-		var skills = [];
 
 		btn.onclick = onclickAddSkill;
 		formEdit.onsubmit = submitEdit;
