@@ -18,7 +18,7 @@
 
 .project-search-wrap {
     width: 100%;
-    height: 65px;
+    height: 60px;
     background-color: #15B7B9;  
 }
 
@@ -31,7 +31,7 @@
 .user-project-selection li{
 	  display: inline-block;
     width: 19.3%;
-    line-height: 65px;
+    line-height: 59px;
     text-align: center
 }
 
@@ -45,7 +45,7 @@
 
 .user-project-selection a{
 	  color: #fff;
-	  font-size: 1.1em;
+	  font-size: 1em;
 }
 
 .user-project-selection a:hover{
@@ -53,15 +53,14 @@
 }
 
 .table-projects {
-	width: 80%;
+	width: 70%;
 	margin: 0 auto;
 }
 
 .one-project {
-
 	width: 33%;
   display: inline-table;
-  margin: 10px 0;
+  margin: 2% 0;
 }
 
 .one-project p {
@@ -72,8 +71,8 @@
 .project-name {
 	margin: 3% auto;
   height: 40px;
-  width: 300px;
-  max-width: 300px;
+  width: 90%;
+  max-width: 90%;
 }
 
 .project-name h4 {
@@ -93,9 +92,8 @@
 }
 
 .project-img {
-	margin: 0 auto;
-	width: 300px;
-  height: 200px;
+	margin: 5% auto 0;
+	width: 80%;
 }
 
 .project-img img {
