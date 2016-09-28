@@ -1,3 +1,4 @@
+<section class="separator-u"></section>
 <section class="p-edit">
   <div class="p-wraper">
     <div class="p-container">
@@ -12,16 +13,63 @@
         </div>
       </div>
         <!--form-->
-        <div class="p-right">
+        <div class="m-right">
         
-          <h1 class="message-txt">Messages</h1>     
+         <!--  <h1 class="message-txt">Messages</h1> -->
+          <section class="module">
+  
+            <header class="top-bar">
+              
+              <div class="left">
+                <span class="icon typicons-message"></span>
+                <h1>Message - example</h1>
+              </div>
+              
+              <div class="right">
+                <span class="icon typicons-minus"></span>
+                <span class="icon typicons-times"></span>
+              </div>
+              
+            </header>
+            
+            <ol class="discussion">
+              <li class="other">
+                <div class="avatar">
+                  <%=image_tag("user-default.png", alt: "Example Image")%>
+                </div>
+                <div class="messages">
+                  <p>Rocío, what do you think about creating an application where people can gather a group of people to make theatre tickets less expensive?</p>
+                  <time datetime="2016-11-13T20:00">Sara • 13 min</time>
+                </div>
+              </li>
+              <li class="self">
+                <div class="avatar">
+                  <%=image_tag("user-default.png", alt: "Example Image")%>
+                </div>
+                <div class="messages">
+                  <p>It's pretty expensive to buy a musical theatre ticket.</p>
+                  <time datetime="2016-11-13T20:14">12 min</time>
+                </div>
+              </li>
+              <li class="other">
+                <div class="avatar">
+                   <%=image_tag("user-default.png", alt: "Example Image")%>
+                </div>
+                <div class="messages">
+                  <p>Ok let's get together and do it.</p>
+                  <time datetime="2016-11-13T20:14">Sara • 1 min</time>
+                </div>
+              </li>
+            </ol>
+            
+          </section>    
 
         </div><!--p-right-->
       
     </div><!--p-container-->
   </div><!--p-wraper-->
 </section> 
-  
+<section class="separator-u"></section> 
 
 
 

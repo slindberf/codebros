@@ -3,6 +3,12 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
 //----------------------Style navbar projects ----------------
+.projects-wraper {
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+  overflow: hidden;
+}
 .p-container {
   height: 70%;
 }
@@ -127,10 +133,10 @@
   margin: 0 auto; 
 }
 
-.info-project-img img{
-  border-radius: 3%;
-  width: 100%;
-  border: 2px solid #7d7d7d;
+.info-project-img img {
+    border-radius: 2%;
+    box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.2);
+    width: 100%;
 }
 
 .info-img p{

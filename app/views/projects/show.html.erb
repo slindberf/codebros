@@ -1,4 +1,4 @@
-<!-- <style>
+<style>
 .typo {
 /*  font-family: "Courier";*/
   font-size: 20px;
@@ -11,15 +11,15 @@
 
 @keyframes type{
   0%{width: 0;}
-/*  50%{width: 0;}
-  100%{ width: 50; }*/ 
+ 50%{width: 0;}
+  100%{ width: 50;} 
 }
-</style> -->
+</style>
 
 <%= render :partial => "projects/nav_projects" %>
-
+<section class="separator-u"></section>
   
-
+<div class="projects-wraper">
 <div class="info-project">
   <div class="info-img">
     <div class="info-project-img">
@@ -76,7 +76,7 @@
   <% end %>
 </div>
 
-<div class="box-separator"></div>
+
 
 
 <div class="options js-container-options">
@@ -103,4 +103,5 @@
     <a href="#" class="js-btn-leave" data-id="<%= @project.id %>">Leave</a>
 
   <% end %>
+</div>
 </div>
