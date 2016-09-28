@@ -1,69 +1,83 @@
-<section>
-<%= render :partial => "users/nav_users" %>
-<div class="border-form-div">
+<section class="p-edit">
+  <div class="p-wraper">
+    <div class="p-container">
+      <div class="p-left">
+        <div class="sidenav">
+          <ul>
+            <li>
+               <%= link_to "Edit Profile", user_registration_path, method: :patch, class:"p-active" %>
+            </li>
+            <li>
+              <a href="">Messages</a>
+            </li>
+          </ul>
+          <a class="p-btn btn-block" href="">Show Profile</a>
+        </div>
+      </div>
+        <!--form-->
+        <div class="p-right">
+          <div class="p-form">
+            <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put}) do |f| %>
+              <%= devise_error_messages! %>
+              <%= f.label :email %><br />
+              <%= f.email_field :email, autofocus: true %>
 
-<h2>Edit <%= resource_name.to_s.humanize %></h2>
+              <div class="js-skills field">
+                <%= f.label :skill %><br />
+                <%= f.text_field :skill, class: 'js-skill', value:"", list: 'skills' %>
+                <datalist id="skills">
+                  <option value="Java">
+                  <option value="Ruby">
+                  <option value="JavaScript">
+                  <option value="PHP">
+                  <option value="Python">
+                  <option value="CSS">
+                </datalist>
+                <%= f.submit "Add", class: 'js-add-skill' %>
+              </div>
+              <ul class="added-skills" >
+                <!--<li>js...</li>-->
+              </ul>
+              
+              <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
+                <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
+              <% end %>
+              
+              <%= f.label :password %> <i>(leave blank if you don't want to change it)</i>
+              <br />
+              <%= f.password_field :password, autocomplete: "off" %>
+              <% if @minimum_password_length %>
+              <br />
+              <em><%= @minimum_password_length %> characters minimum</em>
+              <% end %>
+              
+               <%= f.label :password_confirmation %><br />
+               <%= f.password_field :password_confirmation, autocomplete: "off" %>
+                      
+                      
+                     
+                <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
+                <%= f.password_field :current_password, autocomplete: "off" %>
+                <%= f.submit "Update" %>
 
-<%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put}) do |f| %>
-  <%= devise_error_messages! %>
+            <% end %>   
+            <h3>Cancel my account</h3>
 
-  <div class="field">
-    <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true %>
-  </div>
+            <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
 
-   <div class="js-skills field">
-    <%= f.label :skill %><br />
-    <%= f.text_field :skill, class: 'js-skill', value:"", list: 'skills' %>
-      <datalist id="skills">
-        <option value="Java">
-        <option value="Ruby">
-        <option value="JavaScript">
-        <option value="PHP">
-        <option value="Python">
-        <option value="CSS">
-      </datalist>
-    <%= f.submit "Add", class: 'js-add-skill' %>
-  </div>
+            <%= link_to "Back", :back %>
+          </div><!--form-->
+
+        </div><!--p-right-->
+      
+    </div><!--p-container-->
+  </div><!--p-wraper-->
+</section> 
   
-  <div>
-    <ul class="added-skills" >
-      <!--<li>js...</li>-->
-    </ul>
-  </div>
-  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i><br />
-    <%= f.password_field :password, autocomplete: "off" %>
-    <% if @minimum_password_length %>
-      <br />
-      <em><%= @minimum_password_length %> characters minimum</em>
-    <% end %>
-  </div>
 
-  <div class="field">
-    <%= f.label :password_confirmation %><br />
-    <%= f.password_field :password_confirmation, autocomplete: "off" %>
-  </div>
 
-  <div class="field">
-    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-    <%= f.password_field :current_password, autocomplete: "off" %>
-  </div>
 
-  <div class="actions">
-    <%= f.submit "Update" %>
-  </div>
-<% end %>
 
-<h3>Cancel my account</h3>
-
-<p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
-
-<%= link_to "Back", :back %>
-</div>
-
-</section>
+                    
+                    

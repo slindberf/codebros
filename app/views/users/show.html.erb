@@ -1,18 +1,43 @@
-<%= render :partial => "users/nav_users" %>
 
-<section class="profile">
+
+<section class="p-edit">
   <div class="p-wraper">
-    <div class=user-img> 
+
+    <div class="p-container">
+      <div class="p-left">
+        <div class="sidenav">
+          <ul>
+            <li>
+               <%= link_to "Edit Profile", user_registration_path, method: :patch %>
+            </li>
+            <li>
+              <a href="">Messages</a>
+            </li>
+          </ul>
+          <a class="p-btn btn-block" href="">Show Profile</a>
+        </div>
+        
+      </div>
+
+    <div class="p-right">
+      <div class=user-img> 
        <%=image_tag("user-default.png", alt: "Example Image")%>
     </div>
     <p><%= current_user.name %></p>
     <p><%= current_user.city %></p>
-  </div>
-    
+
+    </div>
+    </div>
+  
+  <div>
 </section>
+
+
+
+
 <section>
  <div class="p-wraper">
-    <%= button_to "Edit Profile", user_registration_path, method: :patch %>
+   
 
     <%= button_to "Delete user", user_registration_path, data: { confirm: "Are you sure?" }, method: :delete %>
   </div>
