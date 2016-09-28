@@ -3,19 +3,19 @@ class Api::V1::ProjectsController < ApplicationController
   #devuelve todos los proyectos
   def index_all
     #hay que añadir paginación para que no devuelva todos los proyectos
-    projects = Project.all
+    projects = Project.all.paginate(:page => params[:page])
     render json: projects
   end
 
   #devuelve los proyectos en los que participa el current_user
   def index_participating
-    projects = current_user.projects
+    projects = current_user.projects.paginate(:page => params[:page])
     render json: projects
   end
 
   #devuelve los proyectos creados por el current_user
   def index
-    projects = current_user.admin_projects
+    projects = current_user.admin_projects.paginate(:page => params[:page])
     render json: projects
   end
 
