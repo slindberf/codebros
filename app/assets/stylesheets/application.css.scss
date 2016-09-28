@@ -54,16 +54,16 @@ header {
 }
 
 /*Logo*/
-h1 {
+h1.logo {
   font-family: 'Oswald', sans-serif;
   float:left;
   font-size:40px;
   line-height:100px;
 }
-h1 a {
+h1.logo a {
   color: #10DDC2;
 }
-h1 a span {
+h1.logo a span {
   color: #15B7B9;
 }
 

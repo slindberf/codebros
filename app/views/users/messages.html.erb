@@ -1,1 +1,34 @@
-<%= render :partial => "users/nav_users" %>
+<section class="p-edit">
+  <div class="p-wraper">
+    <div class="p-container">
+      <div class="p-left">
+        <div class="sidenav">
+          <ul>
+            <li>
+               <%= link_to "Edit Profile", user_registration_path, method: :patch, class:"p-active" %>
+            </li>
+            <li>
+              <a href="/users/messages">Messages</a>
+            </li>
+          </ul>
+          <a class="p-btn btn-block" href="/users/show">Show Profile</a>
+        </div>
+      </div>
+        <!--form-->
+        <div class="p-right">
+        
+          <h1 class="message-txt">Messages</h1>     
+
+        </div><!--p-right-->
+      
+    </div><!--p-container-->
+  </div><!--p-wraper-->
+</section> 
+  
+
+
+
+
+
+                    
+                    
