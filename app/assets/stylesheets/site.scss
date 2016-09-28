@@ -2,27 +2,20 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+/*Banner*/
+section {
+  width: 100%;
+}
 
-/********************************banner*/
-.banner-coding {
-  width: 100%;
-  background: #f57170;
+.h-wrapper {
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
   overflow: hidden;
-  position: relative;
 }
-.banner-design {
-  width: 100%;
-  background: #10ddc2;
-  overflow: hidden;
-  position: relative;  
-}
-.b_share {
-  background: #fff;
-  border-bottom: 1px solid  rgba(0, 26, 44, 0.1);
-}
-.banner-projects {
-  width: 100%;
-  height: 470px;
+
+.h-projects {
+  height: 65%;
   background: url('computer.png') no-repeat top;
   background-attachment: fixed;
   -webkit-background-size: cover;
@@ -30,43 +23,54 @@
   -o-background-size: cover;
   background-size: cover;
 }
-.lettering {
+
+/*Lettering in banner*/
+.slogan {
   display: table;
   width: 100%;
-  height: 350px;
+  height: 100%;
 }
 
-.lettering-right {
+.t-slogan {
   display: table-cell;
   vertical-align: middle;
-  text-align: center;
-}
-.banner-projects p{
-  color: #fff;
-  font-size: 1em;
-  text-shadow: 1px 1px 0 rgba(0,0,0,.54); 
-}
-.banner-projects .lettering h2{
-  font-size: 3em;
-  color: #fff;
-  font-weight: bold;
-  text-shadow: 1px 1px 0 rgba(0,0,0,.54);  
+  text-align: center; 
 }
 
-.lettering h2 span {
+.slogan h2 {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3em;
+  text-shadow: 1px 1px 0 rgba(0,0,0,.54);
+  font-weight: bold;
+}
+
+.slogan h2 span {
   color: #15b7b9;
 }
 
-.banner-wrapper {
-  margin: 0 auto;
-  max-width: 1200px;
-  overflow: hidden;
+/*Phrases section*/
+
+.phrases {
+    background: #fff;
+    border-bottom: 1px solid  rgba(0, 26, 44, 0.1);
+    text-align: center;
 }
-.coding-description {
-  display: table;
-  float: left;
-  height: 348px;
-  width:50%;
+
+.phrases h3 {
+    color: #5a5050;  
+    font-size: 35px;
+    font-family: 'Montserrat', sans-serif;
+    padding: 2em;
+}
+
+/**/
+
+.h-coding {
+  background: #f57170;
+}
+.h-design {
+  background: #10ddc2;  
 }
 
 article {
@@ -75,26 +79,11 @@ article {
   text-align: center;
 }
 
-.coding-description h3,
-.banner-description-share h3 {
-  padding-bottom: 1em;
-  font-size: 2em;
-}
-
-.coding-description p,
-.banner-description-share p {
-  width: 400px;
-  margin-left: 6em;
-}
-
-.coding-description h3,
-.coding-description p {
-  color: #fff;
-}
 .coding-img {
   float: right;
   width:50%; 
 }
+
 .coding-img img,
 .banner-img-share img {
   width: 100%;
@@ -105,45 +94,53 @@ article {
   width:50%; 
 }
 
-.banner-description-share {
+/**/
+.description {
   display: table;
-  float: right;
   height: 348px;
   width:50%;
 }
+.share-description,
+.coding-description {
+  float: right;
+}
 
-.banner-description-share h3,
-.banner-description-share p {
+.design-description {
+  float: left;
+}
+
+.share-description h3,
+.share-description p {
   color: #808080;
 }
 
-.projects h3 {
-    color: #5a5050;  
-    font-size: 40px;
-    line-height: 50px;
-    margin-bottom: 71px;
-    margin-top: 80px;
-    text-align: center;
-}
-.projects .container {
-    padding-left: 15px;
-    padding-right: 15px;
+.coding-description h3,
+.coding-description p,
+.design-description h3,
+.design-description p {
+  color: #fff;
 }
 
-.container {
-    width: 1200px;
-    margin-right: auto;
-    margin-left: auto;
-}
-.container:before, .container:after {
-    content: " ";
-    display: table;
-}
-.container:after {
-    clear: both;
+.coding-description h3,
+.share-description h3,
+.design-description h3 {
+  font-family: 'Montserrat', sans-serif;
+  padding-bottom: 1em;
+  font-size: 2em;
 }
 
-.text-center {
-    text-align: center;
+.coding-description p,
+.share-description p,
+.design-description p {
+  width: 400px;
+  margin-left: 6em;
 }
+
+
+
+
+
+
+
+
 

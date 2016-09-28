@@ -88,8 +88,9 @@
 .project-img img {
 	width: 100%;
 	height: 100%;
-	border-radius: 15px;
-  border: 1px solid #000;
+	border-radius: 10px;
+  border: 2px solid #7d7d7d;
+
 }
 
 .paginate {
@@ -123,8 +124,9 @@
 }
 
 .info-project-img img{
-  border-radius: 4%;
+  border-radius: 3%;
   width: 100%;
+  border: 2px solid #7d7d7d;
 }
 
 .info-img p{
@@ -164,6 +166,7 @@
 }
 
 .info-admin-img img {
+  border: 3px solid #7d7d7d;
   border-radius: 50%;
   width: 100%;
 }
@@ -214,8 +217,9 @@
 }
 
 .member img {
-  width: 100%;
+  border: 3px solid #7d7d7d;
   border-radius: 50%;
+  width: 100%;
 }
 
 .box-separator {

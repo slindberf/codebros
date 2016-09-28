@@ -7,33 +7,31 @@
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application' %>
   </head>
-
   <body>
-  <% if user_signed_in? %>
-    <header>
-      <div class="wrapper-menu">
-        <h1>
-          <a class="logo-a" href="http://codebros.herokuapp.com/">Code<span>Bros</span>
-          </a>
-        </h1>
-      <%= render :partial => "site/signed_in" %>
-      </div>
-    </header>
-  <% elsif current_page?(root_path) %>
-    <header>
-      <div class="wrapper-menu">
-        <h1>
-          <a class="logo-a" href="http://codebros.herokuapp.com/">Code<span>Bros</span>
-          </a>
-        </h1>
-        <%= render :partial => "site/signed_out" %>
-     </div>
-    </header>
-  <% end %>
-
-  <%= yield %>
-
+    <% if user_signed_in? %>
+      <header>
+        <div class="wrapper-menu">
+          <h1>
+            <a class="logo-a" href="http://codebros.herokuapp.com/">Code<span>Bros</span>
+            </a>
+          </h1>
+        <%= render :partial => "site/signed_in" %>
+        </div>
+      </header>
+    <% elsif current_page?(root_path) %>
+      <header>
+        <div class="wrapper-menu">
+          <h1>
+            <a class="logo-a" href="http://codebros.herokuapp.com/">Code<span>Bros</span>
+            </a>
+          </h1>
+          <%= render :partial => "site/signed_out" %>
+       </div>
+      </header>
+   <% end %>
+    <%= yield %>
   </body>
+    <%= render :partial => "site/footer" %>
 </html>
 
 

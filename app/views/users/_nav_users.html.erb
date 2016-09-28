@@ -1,0 +1,15 @@
+<div class="user-wrap">
+		<nav class="p-menu">
+			<ul>
+				<li>
+					<a href="/users/show">My Profile</a>
+				</li>
+				<li>
+					<a href="/users/messages">Messages</a>
+				</li>
+				<li>
+					<%=link_to 'Edit', user_registration_path, method: :patch, class: 'border-l' %>
+				</li>
+			</ul>
+		</nav>
+</div>
