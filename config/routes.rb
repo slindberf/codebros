@@ -22,6 +22,8 @@ Rails.application.routes.draw do
 
   end 
 
+
+
   get 'users/messages'
 
   get 'users/show', to: 'users#show', as: 'show_user'

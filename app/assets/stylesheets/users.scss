@@ -46,6 +46,9 @@
   margin-bottom: 0.4em;
 }
 
+.p-active {
+  color: red;
+}
 .sidenav li a:active,
 .sidenav li a:hover{
   color: #15B7B9;
@@ -85,7 +88,7 @@ h1.message-txt {
 /*form*/
 
 .p-form {
-      border: 1px solid #dce0e0;
+  border: 1px solid #dce0e0;
 }
 
 .form-header {
@@ -100,6 +103,7 @@ h1.message-txt {
 .form-header p{
   margin-left: 1em;
 }
+
 .p-body {
   padding: 20px;
   overflow: hidden;
@@ -110,6 +114,21 @@ h1.message-txt {
     margin-left: -6px;
     margin-right: -6px;
 }
+.f-row label{
+  display: block;
+  padding-top: 9px;
+  padding-bottom: 8px;
+  margin-right: 8px;
+  font-size: 0.8em;
+}
+
+.f-row input {
+  display: block;
+  padding: 8px 10px;
+  outline-color: #15b7b9;
+    
+}
+
 
 .f-row:after {
     clear: both;
@@ -129,21 +148,82 @@ h1.message-txt {
   width: 75%;
   float: left; 
 }
+
+.col-sub {
+  float: right;
+}
+
+.btn-profile {
+  background: #fff;
+  border: 1px solid #15b7b9;
+  font-size: .6em;
+  outline: none;
+  
+}
+
+.btn-sub-size {
+  width: 150px;
+}
+
+.btn-sub {
+  color: #15b7b9; 
+}
+
+.btn-size {
+  width:506px;
+}
+
+.btn-sub:hover {
+  background: #15b7b9;
+  color: #fff;
+}
+
+.btn-red {
+  background: #fff;
+  border: 1px solid #E32057;
+  font-size: .6em;
+  outline: none;
+  width:506px;
+  color: #E32057;
+}
+
+.btn-red:hover {
+  background: #E32057;
+  color: #fff;
+}
+
+
+
+
 .col-size {
   margin-left: -6px;
   margin-right: -6px;
 }
 .col-skill {
   float: right;
-  margin-right: 17px;
+  margin-right: 8px;
 }
 .added-skills li{
-    text-align: center;
     float: left;
+    font-size: .6em;
     margin-left: 16px;
+    margin-bottom: 16px;
+    text-align: center;
+    background: #15b7b9;
+    color: #fff;
+    padding:0.8em;
+
 }
 
 
-// .f-row input::-webkit-input-placeholder {
-  
-// }
+/*error_explanation*/
+#error_explanation h2, 
+#error_explanation li{
+  text-align: center;
+  font-size: 0.8em;
+  color: #7d7d7d;
+}
+
+#error_explanation h2 {
+  color: #E32057;
+}

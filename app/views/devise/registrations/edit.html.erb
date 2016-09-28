@@ -5,9 +5,9 @@
         <div class="sidenav">
           <ul>
             <li>
-               <%= link_to "Edit Profile", user_registration_path, method: :patch, class:"p-active" %>
+               <%= link_to "Edit Profile", user_registration_path, method: :patch %>
             </li>
-            <li>
+           <li>
               <a href="/users/messages">Messages</a>
             </li>
           </ul>
@@ -23,6 +23,20 @@
             <div class="p-body">
                 
                 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put}) do |f| %>
+                    
+                  <div class="f-row">
+                    <%= f.label :name, class: "col-label" %>
+                    <div class="col">
+                      <%= f.text_field :name, class: "col-txt" %>
+                    </div>
+                  </div>
+
+                  <div class="f-row">
+                    <%= f.label :city, class: "col-label" %>
+                    <div class="col">
+                      <%= f.text_field :city, class: "col-txt" %>
+                    </div>
+                  </div>
 
                   <div class="f-row">
                     <%= f.label :email, class: "col-label" %>
@@ -48,8 +62,8 @@
                     </div>
                   </div>
                   <div class="f-row">
-                    <div class="col-label">
-                      <%= f.submit "Add", class: 'js-add-skill' %>
+                    <div class="col-sub">
+                      <%= f.submit "Add", class: 'js-add-skill btn-profile btn-sub btn-sub-size' %>
                     </div>
                   </div>
                   
@@ -91,18 +105,18 @@
                   </div>
 
                 <div class="f-row">
-                  <div class="col">
-                     <%= f.submit "Update" %>
+                  <div class="col-sub">
+                     <%= f.submit "Update", class: "btn-profile btn-sub btn-size" %>
                   </div>
                 </div>
                 <% end %> 
            
-
-                   <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+                <div class="f-row">
+                  <div class="col-sub">
+                     <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete,  class: "btn-profile btn-red" %>
+                  </div>
+                </div>
                   <%= devise_error_messages! %>
-                  <%= link_to "Back", :back %>
-
-              
             </div><!--p-body-->
           </div><!--form-->
 
