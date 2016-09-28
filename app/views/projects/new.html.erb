@@ -1,5 +1,5 @@
 <%= render :partial => "projects/nav_projects" %>
-
+<section class="separator-u"></section>
 <section class="p-edit">
   <div class="p-wraper">
     <div class="p-container">
@@ -23,14 +23,6 @@
             <div class="p-body">
                <%= form_for @project, url: create_project_path do |f| %>
 
-                  <div class="f-row">     
-                    <%= f.label :project_type, class: "col-label" %>
-                    <div class="col">
-                    <%= f.text_field :project_type, class: "col-txt" %>
-                    </div>
-                  </div>
-
-                  
                   <div class="f-row">     
                     <%= f.label :name, class: "col-label" %>
                     <div class="col">
@@ -83,7 +75,7 @@
     </div><!--p-container-->
   </div><!--p-wraper-->
 </section> 
-  
+<section class="separator-u"></section>
 
 
 

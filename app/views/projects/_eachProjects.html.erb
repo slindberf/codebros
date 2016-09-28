@@ -10,13 +10,12 @@
 			<div class="project-name">
 				<h4><%= project.name %></h4><span id="triangle-bottomleft"></span>
 			</div>
-		  <p>Type: <%= project.project_type %></p>
-		  <p>Main purpose: <%= project.purpose %></p>
+		  
 		</div>
 	<% end %>
 
 </div>
-
+<section class="separator-u"></section>
 <div class="paginate">
 	<%= will_paginate @projects %>
 </div>
