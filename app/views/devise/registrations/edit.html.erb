@@ -25,14 +25,17 @@
                 <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: { method: :put}) do |f| %>
 
                   <div class="f-row">
-                    <%= f.label :email %><br />
-                    <%= f.email_field :email, autofocus: true %>
+                    <%= f.label :email, class: "col-label" %>
+                    <div class="col">
+                      <%= f.email_field :email, autofocus: true, class: "col-txt" %>
+                    </div>
                   </div>
                   
                   <div class="f-row">
-                    <div class="js-skills field">
-                      <%= f.label :skill %><br />
-                      <%= f.text_field :skill, class: 'js-skill', value:"", list: 'skills' %>
+                    <div class="js-skills">
+                      <%= f.label :skill, class: "col-label" %>
+                      <div class="col">
+                        <%= f.text_field :skill, class: 'js-skill col-txt', value:"", list: 'skills' %>
                       <datalist id="skills">
                         <option value="Java">
                         <option value="Ruby">
@@ -41,50 +44,65 @@
                         <option value="Python">
                         <option value="CSS">
                       </datalist>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="f-row">
+                    <div class="col-label">
                       <%= f.submit "Add", class: 'js-add-skill' %>
                     </div>
                   </div>
-
-                  <div class="f-row">
-                    <ul class="added-skills" >
-                      <!--<li>js...</li>-->
-                    </ul>
-                  </div>
-
-                  <% if devise_mapping.confirmable? && resource.pending_reconfirmation? %>
-                    <div>Currently waiting confirmation for: <%= resource.unconfirmed_email %></div>
-                  <% end %>
                   
                   <div class="f-row">
-                    <%= f.label :password %> <i>(leave blank if you don't want to change it)</i>
-                    <br />
-                    <%= f.password_field :password, autocomplete: "off" %>
+                    <div class="col-size">
+                      <ul class="added-skills col-skill" >
+                      <!--<li>js...</li>-->
+                      </ul>
+                    </div>
+                  </div>
+                    
+            
+
+                  
+                  
+                  <div class="f-row">
+                    <%= f.label :password, class: "col-label" %>
+                    <div class="col">
+                      <%= f.password_field :password, autocomplete: "off", class: "col-txt", placeholder: '(leave blank if you don\'t want to change it)'  %>
+                    </div>
                     <% if @minimum_password_length %>
                     <br />
                     <em><%= @minimum_password_length %> characters minimum</em>
                     <% end %>
                   </div>
+
                   <div class="f-row">
-                   <%= f.label :password_confirmation %><br />
-                   <%= f.password_field :password_confirmation, autocomplete: "off" %>
+                   <%= f.label :confirmation, class: "col-label" %>
+                   <div class="col">
+                     <%= f.password_field :password_confirmation, autocomplete: "off", class: "col-txt" %>
+                   </div>
                   </div>     
                           
                   <div class="f-row">     
-                    <%= f.label :current_password %> <i>(we need your current password to confirm your changes)</i><br />
-                    <%= f.password_field :current_password, autocomplete: "off" %>
-                  </div>
-                  <div class="f-row">
-                    <%= f.submit "Update" %>
+                    <%= f.label :current_password, class: "col-label" %>
+                    <div class="col">
+                      <%= f.password_field :current_password, autocomplete: "off", placeholder: '(we need your current password to confirm your changes)', class: "col-txt" %>
+                    </div>
                   </div>
 
+                <div class="f-row">
+                  <div class="col">
+                     <%= f.submit "Update" %>
+                  </div>
+                </div>
                 <% end %> 
-                <div class="f-row">  
-                  <h3>Cancel my account</h3>
+           
 
-                  <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
+                   <p>Unhappy? <%= button_to "Cancel my account", registration_path(resource_name), data: { confirm: "Are you sure?" }, method: :delete %></p>
                   <%= devise_error_messages! %>
                   <%= link_to "Back", :back %>
-                </div>
+
+              
             </div><!--p-body-->
           </div><!--form-->
 

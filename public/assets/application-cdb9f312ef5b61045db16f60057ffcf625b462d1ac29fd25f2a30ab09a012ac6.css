@@ -1,0 +1,1031 @@
+/* line 1, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/devise.scss */
+::-moz-selection {
+  background: yellow;
+}
+
+/* line 2, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/devise.scss */
+::selection {
+  background: yellow;
+}
+
+/*Logo sign out*/
+/* line 5, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/devise.scss */
+.logo-b {
+  font-size: 40px;
+  line-height: 100px;
+  color: #10DDC2;
+  margin-left: 1em;
+}
+
+/* line 12, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/devise.scss */
+.logo-b span {
+  color: #f5f5f5;
+}
+
+/*Error message*/
+/* line 16, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/devise.scss */
+.error {
+  position: absolute;
+  top: 520px;
+  right: 48%;
+}
+
+/* line 21, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/devise.scss */
+.error p {
+  color: #fff;
+  font-size: 1.2em;
+  line-height: 3em;
+}
+
+/*LOG IN*/
+/* line 27, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/devise.scss */
+.body-session-new {
+  background-color: #f57170;
+  width: 100%;
+  height: 890px;
+}
+
+/* line 32, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/devise.scss */
+.body-registration-new {
+  background-color: #15b7b9;
+  height: 890px;
+}
+
+/* line 38, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/devise.scss */
+.login {
+  margin: 0 auto;
+  width: 450px;
+}
+
+/* line 42, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/devise.scss */
+.heading-session-new {
+  margin: 0 auto;
+  width: 450px;
+  height: 48px;
+}
+
+/* line 48, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/devise.scss */
+.login-heading {
+  padding-top: 2em;
+  font: 1.8em/48px sans-serif;
+  color: white;
+}
+
+/*pink*/
+/* line 55, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/devise.scss */
+.input-txt {
+  width: 100%;
+  padding: 20px 10px;
+  background: #f57170;
+  border: none;
+  font-size: 1em;
+  color: white;
+  border-bottom: 1px dotted rgba(250, 250, 250, 0.4);
+  -moz-transition: background-color 0.5s ease-in-out;
+  -o-transition: background-color 0.5s ease-in-out;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
+}
+
+/* line 68, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/devise.scss */
+.input-txt:-moz-placeholder {
+  color: #FF8F8E;
+}
+
+/* line 71, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/devise.scss */
+.input-txt:-ms-input-placeholder {
+  color: #FF8F8E;
+}
+
+/* line 74, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/devise.scss */
+.input-txt::-webkit-input-placeholder {
+  color: #FF8F8E;
+}
+
+/* line 77, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/devise.scss */
+.input-txt:focus {
+  background-color: #B55453;
+  outline-color: #FF908E;
+}
+
+/* line 81, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/devise.scss */
+input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+}
+
+/*blue*/
+/* line 85, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/devise.scss */
+.input-txt-blue {
+  width: 100%;
+  padding: 20px 10px;
+  background: #15b7b9;
+  border: none;
+  font-size: 1em;
+  color: white;
+  border-bottom: 1px dotted rgba(250, 250, 250, 0.4);
+  -moz-transition: background-color 0.5s ease-in-out;
+  -o-transition: background-color 0.5s ease-in-out;
+  -webkit-transition: background-color 0.5s ease-in-out;
+  transition: background-color 0.5s ease-in-out;
+}
+
+/* line 98, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/devise.scss */
+.input-txt-blue:-moz-placeholder {
+  color: #0F8586;
+}
+
+/* line 101, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/devise.scss */
+.input-txt-blue:-ms-input-placeholder {
+  color: #0F8586;
+}
+
+/* line 104, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/devise.scss */
+.input-txt-blue::-webkit-input-placeholder {
+  color: #0F8586;
+}
+
+/* line 107, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/devise.scss */
+.input-txt-blue:focus {
+  background-color: #0C6C6C;
+  outline-color: #40999A;
+}
+
+/**/
+/* line 113, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/devise.scss */
+.login-footer {
+  margin: 10px 0;
+  overflow: hidden;
+  width: 100%;
+}
+
+/* line 118, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/devise.scss */
+.btn {
+  padding: 15px 30px;
+  border: none;
+  background: white;
+  font-size: .8em;
+  line-height: 1.6em;
+}
+
+/* line 125, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/devise.scss */
+.btn-pink {
+  color: #f57170;
+}
+
+/* line 128, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/devise.scss */
+.btn-blue {
+  color: #15b7b9;
+}
+
+/* line 131, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/devise.scss */
+a.btn-blue {
+  border-left: 1px dotted;
+}
+
+/* line 134, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/devise.scss */
+.btn--left {
+  float: left;
+  border-right: 1px dotted #15b7b9;
+}
+
+/* line 138, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/devise.scss */
+.btn--right {
+  float: right;
+}
+
+/* line 142, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/devise.scss */
+.icon {
+  display: inline-block;
+  font-size: .8em;
+  line-height: 3em;
+  color: white;
+}
+
+/* SIGN UP*/
+/* line 6, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.p-container {
+  height: 70%;
+}
+
+/* line 9, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.project-search-wrap {
+  width: 100%;
+  height: 60px;
+  background-color: #15B7B9;
+}
+
+/* line 15, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.user-project-selection {
+  width: 60%;
+  margin: 0 20%;
+}
+
+/* line 20, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.user-project-selection li {
+  display: inline-block;
+  width: 19.3%;
+  line-height: 59px;
+  text-align: center;
+}
+
+/* line 27, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.user-project-selection li {
+  border-right: 1px dotted #10ddc2;
+}
+
+/* line 31, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.user-project-selection ul li:first-child {
+  border-left: 1px dotted #10ddc2;
+}
+
+/* line 35, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.user-project-selection a {
+  color: #fff;
+  font-size: 1em;
+}
+
+/* line 40, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.user-project-selection a:hover {
+  color: #10ddc2;
+}
+
+/* line 46, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.table-projects {
+  width: 70%;
+  margin: 3% auto 0;
+}
+
+/* line 51, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.one-project {
+  width: 33%;
+  display: inline-table;
+  margin-top: 2%;
+}
+
+/* line 57, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.one-project p {
+  margin: 3% 14%;
+  font-size: 1em;
+}
+
+/* line 62, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.project-name {
+  margin: 1% auto;
+  height: 30px;
+  width: 80%;
+  max-width: 90%;
+}
+
+/* line 69, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.project-name h4 {
+  padding: 2% 19% 2% 2%;
+  background-color: #10ddc2;
+  font-size: 1.1em;
+  display: inline-block;
+  line-height: 25px;
+}
+
+/* line 77, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+#triangle-bottomleft {
+  width: 0;
+  height: 0;
+  border-top: 35px solid #10ddc2;
+  border-right: 55px solid transparent;
+  position: absolute;
+}
+
+/* line 85, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.project-img {
+  margin: 0 auto;
+  width: 80%;
+}
+
+/* line 90, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.project-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  border: 2px solid #7d7d7d;
+}
+
+/* line 98, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.paginate {
+  color: #15B7B9;
+  text-align: center;
+  line-height: 2em;
+  font-size: 1.2em;
+}
+
+/* line 105, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.paginate a {
+  color: #10ddc2;
+}
+
+/* line 112, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.info-project {
+  width: 90%;
+  margin: 3% auto;
+}
+
+/* line 117, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.info-img {
+  display: inline-block;
+  vertical-align: top;
+  width: 30%;
+}
+
+/* line 123, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.info-project-img {
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* line 128, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.info-project-img img {
+  border-radius: 3%;
+  width: 100%;
+  border: 2px solid #7d7d7d;
+}
+
+/* line 134, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.info-img p {
+  text-align: center;
+  font-size: 1.2em;
+}
+
+/* line 139, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.info-text {
+  display: inline-block;
+  width: 49%;
+  font-size: 1em;
+  vertical-align: top;
+}
+
+/* line 146, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.info-text p:last-child {
+  font-size: 0.9em;
+}
+
+/* line 150, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.info-text p:first-child {
+  color: #15B7B9;
+  text-align: right;
+}
+
+/* line 155, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.info-admin {
+  display: inline-block;
+  vertical-align: top;
+  width: 20%;
+}
+
+/* line 161, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.info-admin p {
+  text-align: center;
+}
+
+/* line 165, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.info-admin-img {
+  margin: 0 auto;
+  width: 60%;
+}
+
+/* line 170, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.info-admin-img img {
+  border: 3px solid #7d7d7d;
+  border-radius: 50%;
+  width: 100%;
+}
+
+/* line 176, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.separator {
+  width: 90%;
+  margin: 0 auto;
+  border-bottom: 1px dotted #10ddc2;
+  position: relative;
+}
+
+/* line 183, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.separator span {
+  padding: 0 10px;
+  color: #10ddc2;
+  background-color: #f5f5f5;
+  display: block;
+  position: absolute;
+  top: -9px;
+  right: 46%;
+}
+
+/* line 193, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.container-looking {
+  width: 40%;
+  margin: 3% auto;
+}
+
+/* line 198, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.looking-img {
+  display: inline-block;
+  width: 10%;
+  margin: 0 11%;
+  text-align: center;
+}
+
+/* line 205, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.looking-img img {
+  width: 100%;
+}
+
+/* line 209, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.members-project {
+  width: 40%;
+  margin: 3% auto;
+}
+
+/* line 214, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.member {
+  display: inline-block;
+  width: 20%;
+  margin: 0 6.6%;
+  text-align: center;
+}
+
+/* line 221, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.member img {
+  border: 3px solid #7d7d7d;
+  border-radius: 50%;
+  width: 100%;
+}
+
+/* line 227, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.box-separator {
+  width: 100%;
+  height: 30px;
+  background-color: #15B7B9;
+}
+
+/* line 233, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.options {
+  position: relative;
+  width: 90%;
+  margin: 3% auto;
+}
+
+/* line 239, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/projects.scss */
+.options a {
+  position: absolute;
+  right: 0;
+  color: #fff;
+  padding: 1%;
+  background-color: #F57170;
+}
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*Banner*/
+/* line 7, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/site.scss */
+section {
+  width: 100%;
+}
+
+/* line 12, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/site.scss */
+.h-wrapper {
+  height: 100%;
+  margin: 0 auto;
+  max-width: 1200px;
+  overflow: hidden;
+}
+
+/* line 19, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/site.scss */
+.h-projects {
+  height: 500px;
+  background: url("computer.png") no-repeat top;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/*Lettering in banner*/
+/* line 30, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/site.scss */
+.slogan {
+  display: table;
+  width: 100%;
+  height: 100%;
+}
+
+/* line 36, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/site.scss */
+.t-slogan {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* line 42, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/site.scss */
+.slogan h2 {
+  color: #fff;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 3em;
+  text-shadow: 1px 1px 0 rgba(0, 0, 0, 0.54);
+  font-weight: bold;
+}
+
+/* line 50, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/site.scss */
+.slogan h2 span {
+  color: #15b7b9;
+}
+
+/*Phrases section*/
+/* line 56, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/site.scss */
+.phrases {
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 26, 44, 0.1);
+  text-align: center;
+}
+
+/* line 62, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/site.scss */
+.phrases h3 {
+  color: #5a5050;
+  font-size: 35px;
+  font-family: 'Montserrat', sans-serif;
+  padding: 2em;
+}
+
+/**/
+/* line 71, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/site.scss */
+.h-coding {
+  background: #f57170;
+}
+
+/* line 74, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/site.scss */
+.h-design {
+  background: #10ddc2;
+}
+
+/* line 78, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/site.scss */
+article {
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+/* line 84, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/site.scss */
+.coding-img {
+  float: right;
+  width: 50%;
+}
+
+/* line 89, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/site.scss */
+.coding-img img,
+.banner-img-share img {
+  width: 100%;
+}
+
+/* line 94, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/site.scss */
+.banner-img-share {
+  float: left;
+  width: 50%;
+}
+
+/**/
+/* line 100, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/site.scss */
+.description {
+  display: table;
+  height: 348px;
+  width: 50%;
+}
+
+/* line 105, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/site.scss */
+.share-description,
+.coding-description {
+  float: right;
+}
+
+/* line 110, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/site.scss */
+.design-description {
+  float: left;
+}
+
+/* line 114, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/site.scss */
+.share-description h3,
+.share-description p {
+  color: #808080;
+}
+
+/* line 119, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/site.scss */
+.coding-description h3,
+.coding-description p,
+.design-description h3,
+.design-description p {
+  color: #fff;
+}
+
+/* line 126, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/site.scss */
+.coding-description h3,
+.share-description h3,
+.design-description h3 {
+  font-family: 'Montserrat', sans-serif;
+  padding-bottom: 1em;
+  font-size: 2em;
+}
+
+/* line 134, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/site.scss */
+.coding-description p,
+.share-description p,
+.design-description p {
+  width: 400px;
+  margin-left: 6em;
+}
+/*image profile*/
+/* line 6, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/users.scss */
+.user-img {
+  height: 150px;
+  width: 150px;
+}
+
+/* line 11, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/users.scss */
+.user-img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  border: 3px solid #7d7d7d;
+}
+
+/**/
+/* line 18, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/users.scss */
+.p-wraper {
+  height: 100%;
+  margin: 0 auto;
+  max-width: 900px;
+  overflow: hidden;
+}
+
+/* line 24, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/users.scss */
+.p-edit {
+  height: 100%;
+}
+
+/* line 28, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/users.scss */
+.p-container {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+/* line 34, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/users.scss */
+.p-left {
+  float: left;
+  width: 25%;
+}
+
+/* line 39, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/users.scss */
+.p-right {
+  background: #fff;
+  width: 75%;
+  float: left;
+}
+
+/*Sidenav*/
+/* line 46, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/users.scss */
+.sidenav li {
+  margin-bottom: 0.4em;
+}
+
+/* line 50, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/users.scss */
+.sidenav li a:active,
+.sidenav li a:hover {
+  color: #15B7B9;
+}
+
+/* line 55, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/users.scss */
+.sidenav li a {
+  font-size: 16px;
+  color: #7d7d7d;
+}
+
+/*Button Show Profile*/
+/* line 60, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/users.scss */
+.btn-block {
+  display: block;
+  white-space: normal;
+  width: 60%;
+}
+
+/* line 66, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/users.scss */
+.p-btn {
+  background: white;
+  border: 1.5px solid #7d7d7d;
+  color: #7d7d7d;
+  font-size: 14px;
+  line-height: 1.6em;
+  margin-top: 1.5em;
+  padding: 7px 21px;
+  text-align: center;
+}
+
+/* line 77, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/users.scss */
+.p-btn:hover {
+  color: #15B7B9;
+}
+
+/*Messages*/
+/* line 81, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/users.scss */
+h1.message-txt {
+  font-size: 40px;
+  line-height: 100px;
+  text-align: center;
+}
+
+/*form*/
+/* line 88, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/users.scss */
+.p-form {
+  border: 1px solid #dce0e0;
+}
+
+/* line 92, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/users.scss */
+.form-header {
+  color: #484848;
+  font-size: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid #dce0e0;
+  background-color: #edefed;
+}
+
+/* line 101, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/users.scss */
+.form-header p {
+  margin-left: 1em;
+}
+
+/* line 104, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/users.scss */
+.p-body {
+  padding: 20px;
+  overflow: hidden;
+}
+
+/* line 109, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/users.scss */
+.f-row {
+  margin-bottom: 24px;
+  margin-left: -6px;
+  margin-right: -6px;
+}
+
+/* line 115, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/users.scss */
+.f-row:after {
+  clear: both;
+}
+
+/* line 119, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/users.scss */
+.f-row:before, .f-row:after {
+  content: " ";
+  display: table;
+}
+
+/* line 124, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/users.scss */
+.col-label {
+  width: 20%;
+  float: left;
+  text-align: right;
+}
+
+/* line 129, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/users.scss */
+.col-txt {
+  width: 75%;
+  float: left;
+}
+
+/* line 133, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/users.scss */
+.col-size {
+  margin-left: -6px;
+  margin-right: -6px;
+}
+
+/* line 137, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/users.scss */
+.col-skill {
+  float: right;
+  margin-right: 17px;
+}
+
+/* line 141, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/users.scss */
+.added-skills li {
+  text-align: center;
+  float: left;
+  margin-left: 16px;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS/SCSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+
+
+ */
+/* User sign in and sign forms. */
+@import "https://fonts.googleapis.com/css?family=Montserrat|Oswald|Raleway:700";
+/* line 29, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/application.css.scss */
+body {
+  background: #f5f5f5;
+  color: #3e3e3e;
+  font-family: 'calibri', sans-serif;
+  font-size: 18px;
+}
+
+/* line 35, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/application.css.scss */
+li {
+  list-style: none;
+}
+
+/* line 38, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/application.css.scss */
+a {
+  text-decoration: none;
+}
+
+/*Header*/
+/* line 42, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/application.css.scss */
+header {
+  background: #fff;
+  border-bottom: 1px solid rgba(0, 26, 44, 0.1);
+  margin-top: 0;
+  min-height: 70px;
+  width: 100%;
+}
+
+/*Menu*/
+/* line 51, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/application.css.scss */
+.wrapper-menu {
+  margin: 0 auto;
+  max-width: 1200px;
+  overflow: hidden;
+}
+
+/*Logo*/
+/* line 58, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/application.css.scss */
+h1.logo {
+  font-family: 'Oswald', sans-serif;
+  float: left;
+  font-size: 40px;
+  line-height: 100px;
+}
+
+/* line 64, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/application.css.scss */
+h1.logo a {
+  color: #10DDC2;
+}
+
+/* line 67, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/application.css.scss */
+h1.logo a span {
+  color: #15B7B9;
+}
+
+/*menus user log-in*/
+/* line 72, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/application.css.scss */
+.menu-user {
+  float: left;
+  margin-left: 9em;
+}
+
+/* line 77, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/application.css.scss */
+.menu-log-in {
+  position: relative;
+  float: right;
+}
+
+/* line 82, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/application.css.scss */
+.menu-user, .menu-log-in {
+  margin-top: 43px;
+}
+
+/* line 86, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/application.css.scss */
+.menu-user ul, .menu-log-in ul {
+  overflow: hidden;
+}
+
+/* line 90, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/application.css.scss */
+.menu-user li, .menu-log-in li {
+  float: left;
+}
+
+/* line 93, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/application.css.scss */
+.menu-user li {
+  padding-left: 3em;
+}
+
+/* line 97, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/application.css.scss */
+.menu-user a, .menu-log-in a {
+  color: #5a5050;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  line-height: normal;
+  padding: 10px 20px;
+}
+
+/* line 105, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/application.css.scss */
+.menu-user a:hover, .menu-log-in a:hover {
+  color: #10DDC2;
+}
+
+/*avatar*/
+/* line 110, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/application.css.scss */
+.border-avatar {
+  border-right: 2px solid #10DDC2;
+}
+
+/* line 114, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/application.css.scss */
+.avatar-user {
+  position: absolute;
+  top: -10px;
+  right: 63px;
+  width: 40px;
+  height: 40px;
+  border-radius: 40px;
+}
+
+/*Footer*/
+/* line 125, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/application.css.scss */
+footer {
+  background: #7d7d7d;
+  border-top: 1px solid rgba(178, 178, 178, 0.5);
+  color: #e0e0e0;
+  padding-top: 77px;
+  padding-bottom: 66px;
+  text-align: center;
+  width: 100%;
+}
+
+/* line 134, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/application.css.scss */
+footer p {
+  color: #e0e0e0;
+  margin-bottom: 33px;
+  font-size: 0.6em;
+}
+
+/* line 140, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/application.css.scss */
+.social-links {
+  margin-bottom: 40px;
+  margin-top: 10px;
+}
+
+/* line 145, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/application.css.scss */
+.social-links li {
+  display: inline-block;
+  padding-left: 11px;
+  padding-right: 11px;
+}
+
+/* line 151, /Users/slindber/AA_Ironhack/codebros/app/assets/stylesheets/application.css.scss */
+.social-links a {
+  color: #e0e0e0;
+}
