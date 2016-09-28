@@ -58,6 +58,9 @@
   font-size: 16px;
   color: #7d7d7d;
 }
+.sidenav li {
+  color: #7d7d7d;
+}
 /*Button Show Profile*/
 .btn-block {
     display: block;
@@ -154,11 +157,10 @@ h1.message-txt {
 }
 
 .btn-profile {
-  background: #fff;
+  background: #15b7b9;
   border: 1px solid #15b7b9;
   font-size: .6em;
   outline: none;
-  
 }
 
 .btn-sub-size {
@@ -166,32 +168,22 @@ h1.message-txt {
 }
 
 .btn-sub {
-  color: #15b7b9; 
+  color: #fff; 
 }
 
 .btn-size {
   width:506px;
 }
 
-.btn-sub:hover {
-  background: #15b7b9;
-  color: #fff;
-}
 
 .btn-red {
-  background: #fff;
+  background:#E32057;
   border: 1px solid #E32057;
   font-size: .6em;
   outline: none;
   width:506px;
-  color: #E32057;
-}
-
-.btn-red:hover {
-  background: #E32057;
   color: #fff;
 }
-
 
 
 

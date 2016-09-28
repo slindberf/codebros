@@ -14,11 +14,5 @@
 //= require jquery_ujs
 //= require_tree .
 
-//cambiar a js 
-$(document).ready(function(){
-  setTimeout(function(){
-  $('.alert').remove();
-  $('.notice').remove();
-  }, 2500);
- });
+
 
