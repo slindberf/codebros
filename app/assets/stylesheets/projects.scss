@@ -221,9 +221,9 @@
 
 .member {
   display: inline-block;
-  width: 20%;
   margin: 0 6.6%;
   text-align: center;
+  width: 18%;
 }
 
 .member img {
@@ -252,5 +252,21 @@
   background-color: #F57170;
 }
 
+.js-category {
+ font-size: 0.9em;
+ width: 12%;
+ border: none;
+ color: #fff;
+ background-color: #F57170 ;
+}
 
+.p-select {
+    color: #15B7B9;
+    background-color: #fff;
+    border: 1px solid #15B7B9;
+    font-size: 15px;
+    height: 34px;
+    outline: #fff;
+    width: 150px;   
+} 
 

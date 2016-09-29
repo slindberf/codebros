@@ -1,19 +1,14 @@
 var numPages;
-var $table;
 var currentPage = 1;
 var newPage = 0;
 var url;
 $(document).ready(function(){
-  $('.current').next().removeAttr('rel');
-  numPages = parseInt($('.next_page').prev().text());
-  console.log(numPages);
   var href = $('.next_page').prev().attr('href')
   url = href.split('=')[0] + '=';
+  numPages = parseInt($('.next_page').prev().text());
+  
   $('.pagination').on('click', 'a', changePage);
-  $table = $('.table-projects');
 });
-
-
 function changePage(event) {
   event.preventDefault();
   var $tagA = $(event.currentTarget);
@@ -23,17 +18,16 @@ function changePage(event) {
     type: 'get',
     url: url,
     success: function (response) {
-      //debugger
-      $table.empty();
-      //debugger
-      response.forEach(printProject);
+      printProjects(response);
       editPagination($tagA);
     }
   });
 };
-
-function printProject(project) {
-  $table.append('<div class="one-project">' + 
+function printProjects(response) {
+  var $table = $('.table-projects');
+  $table.empty();
+  response.forEach(function(project){
+    $table.append('<div class="one-project">' + 
     '<div class="project-img">' +
         '<a href="/projects/' + project.id + '">' +
           '<img src="../project' + (project.id%3 + 1) +'.png">' +
@@ -42,39 +36,33 @@ function printProject(project) {
       '<div class="project-name">' +
         '<h4>' + project.name + '</h4><span id="triangle-bottomleft"></span>' +
       '</div>' +
-      '<p>Type:' +  project.project_type + '</p>' +
-      '<p>Main purpose:' + project.purpose + '</p>' +
     '</div>');
+  })
 };
-
+function replaceAtag(){
+  $('.current').replaceWith($('<a href ="' + url + currentPage + '">' + currentPage + '</a>'));
+  $('.aux').addClass('current');
+  $('.current').removeClass('aux');
+}
+function replaceEmTag(className){
+  return $('<em class="'+className+'">' + newPage + '</em>');
+}
 function editPagination($tagA) {
-  console.log('hola');
-  console.log($tagA);
-
+  var emTag = $('<em class="aux">' + newPage + '</em>');
   if ($tagA.hasClass('previous_page')) {
-    console.log('prev');
     newPage = currentPage - 1;
-    // debugger
-    $('.current').prev().replaceWith($('<em class="aux">' + newPage + '</em>'));
-    // debugger
-    $('.current').replaceWith($('<a href ="' + url + currentPage + '">' + currentPage + '</a>'));
-    $('.aux').addClass('current');
-    $('.current').removeClass('aux');
-
+    $('.current').prev().replaceWith(replaceEmTag('aux'));
+    replaceAtag();
   } else if ($tagA.hasClass('next_page')){
-    console.log('next');
     newPage = currentPage + 1;
-    $('.current').next().replaceWith($('<em class="aux">' + newPage + '</em>'));
-    $('.current').replaceWith($('<a href ="' + url + currentPage + '">' + currentPage + '</a>'));
-    $('.aux').addClass('current');
-    $('.current').removeClass('aux');
+    $('.current').next().replaceWith(replaceEmTag('aux'));
+    replaceAtag();
   } else {
-    console.log('num');
     newPage = parseInt($tagA.text());
     $('.current').replaceWith($('<a href ="' + url + currentPage + '">' + currentPage + '</a>'));
-    $tagA.replaceWith($('<em class="current">' + newPage + '</em>'));
+    $tagA.replaceWith(replaceEmTag('current'));
   }
-
+  
   currentPage = newPage;
   
   if (currentPage === 1) {

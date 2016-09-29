@@ -40,16 +40,14 @@ class ProjectsController < ApplicationController
 
   def destroy
     member = current_user.members.find_by(project_id: @project.id)
-    if(member)
-      if member.admin?
+    if(member && member.admin?)
         @project.destroy
         flash[:notice] = "Your project has been deleted"
         redirect_to projects_index_path
-      end
-    end
+    else
     flash[:alert] = "You don't have the admin rights to delete this project."
     redirect_to show_project_path @project
-    
+    end
   end
 
   def index

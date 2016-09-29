@@ -11,15 +11,13 @@
 
 @keyframes type{
   0%{width: 0;}
- 50%{width: 0;}
-  100%{ width: 50;} 
+/* 50%{width: 0;}
+  100%{ width: 50;} */
 }
 </style>
 
 <%= render :partial => "projects/nav_projects" %>
-<section class="separator-u"></section>
-  
-<div class="projects-wraper">
+
 <div class="info-project">
   <div class="info-img">
     <div class="info-project-img">
@@ -34,7 +32,7 @@
     <p><%= @project.description %></p>
   </div>
   <div class="info-admin">
-    <p>*</p>
+    <p><i class="fa fa-star" aria-hidden="true"></i></p>
     <div class="info-admin-img">
       <%=image_tag("user-default.png", alt: "Example Image")%>
     </div>
@@ -75,10 +73,6 @@
     </div>
   <% end %>
 </div>
-
-
-
-
 <div class="options js-container-options">
   <% if @role == 'admin' %>
     <%= link_to 'Delete Project', destroy_project_path(@project.id), method: :delete %>
@@ -104,4 +98,5 @@
 
   <% end %>
 </div>
-</div>
+
+

@@ -1,3 +1,4 @@
+<%= render :partial => "users/nav_users" %>
 <section class="separator-u"></section>
 <section class="p-edit">
   <div class="p-wraper">
@@ -7,6 +8,7 @@
           <ul>
              <li>
                <%= link_to "Edit Profile", user_registration_path, method: :patch, class:"p-active" %>
+               
             </li> 
           </ul>
           <a class="p-btn btn-block" href="/users/show">Show Profile</a>
