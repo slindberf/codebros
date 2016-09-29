@@ -3,58 +3,56 @@
 <section class="p-edit">
   <div class="p-wraper">
     <div class="p-container">
-      <div class="p-left">
-        <div class="sidenav-u">
-          <div class=user-img> 
-         <%=image_tag("user-default.png", alt: "Example Image")%>
-        </div>
-         <ul>
-           <li><%= current_user.name %></li>
-         </ul>
-
-         
-        </div>
-      </div>
-        <!--form-->
-        <div class="p-right">
-          <div class="p-form">
-            <div class="form-header">
-              <p></p>
-              <p><%= current_user.city %></p>
-               <%= link_to "Edit Profile", user_registration_path, method: :patch  %>
-            </div>
-            <div class="p-body">
-               <div class="f-row">
-                    <p>About me!</p>
-                    <div class="col">
-                      Lorem Ipsum es simplemente el texto de relleno de las imprentas y archivos de texto. Lorem Ipsum ha sido el texto de relleno estándar de las industrias desde el año 1500, cuando un impresor (N. del T. persona que se dedica a la imprenta) desconocido usó una galería de textos y los mezcló de tal manera que logró hacer un libro de textos especimen. No sólo sobrevivió 500 años, sino que tambien ingresó como texto de relleno en documentos electrónicos, quedando esencialmente igual al original. Fue popularizado en los 60s con la creación de las hojas "Letraset", las cuales contenian pasajes de Lorem Ipsum, y más recientemente con software de autoedición, como por ejemplo Aldus PageMaker, el cual incluye versiones de Lorem Ipsum.    
-                    </div>
-                </div>
-
-
-
-
-              <ul>
-              <% current_user.skills.each do |skill| %>
-                <li><%= skill.name %></li>
-                <%= button_to "X", remove_skill_path(skill.id), method: :delete %>
-              <% end %>
-              </ul>
-
-            
+      
                
-                  
+          
+        <!--form-->
+        
+          <div class="u-form">
+            <div class="u-form-header">
+              <p>Profile: <%= current_user.name %></p>
+               <%= link_to "Edit Profile", user_registration_path, method: :patch, class:"u-btn u-btn-block"  %>
+            </div>
+            <div class="u-body">
+               <div class="u-left">
+                 <div class=user-img> 
+                  <%=image_tag("user-default.png", alt: "Example Image")%>
+                </div>
+               </div>
+               <div class="u-right">
+
+                <div class="general">
+                  <p class="u-header">General</p>
+                  <hr>
+                  <p>Name: <span><%= current_user.name %></span></p>
+                  <hr>
+                  <p>Email: <span><%= current_user.email %></span></p>
+                  <hr>
+                  <p>Member since: <span><%= current_user.created_at.strftime("%d %b. %Y") %></span></p>
+                  <hr>
+                  <p>City: <span><%= current_user.city %></span></p>
+                  <hr>
+                  <p class="u-header">About you!</p>
+                  <hr>
+                  <p><%= current_user.about %></p>
+              
+               </div><!--u-right-->
+                <% current_user.skills.each do |skill| %>
+                    <div class="skills-u">
+                       <p class="u-skill"><%= skill.name %></p>
+                    <%= button_to "X", remove_skill_path(skill.id), method: :delete, class:'btn-u' %>
+                    </div>
+                   
+                    <% end %>
             </div><!--p-body-->
           </div><!--form-->
 
-        </div><!--p-right-->
+        
       
     </div><!--p-container-->
   </div><!--p-wraper-->
 </section> 
 <section class="separator-u"></section>
 
-     
-
-
+    
 

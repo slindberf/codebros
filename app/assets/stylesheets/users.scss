@@ -206,7 +206,7 @@ h1.message-txt {
   color: #E32057;
 }
 
-/*Profile User*/
+/*Profile User**********************/
 .separator-u {
     width: 100%;
     height: 40px; 
@@ -227,14 +227,12 @@ h1.message-txt {
 .user-img {
   height: 150px;
   width: 150px;
-  margin: 0.4em;
 }
 
 .user-img img {
   width: 100%;
   height: 100%;
-  border-radius: 100%;
-  border: 3px solid #7d7d7d;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1), 0 2px 3px rgba(0, 0, 0, 0.2);
 }
 /*Button*/
 .btn-margin {
@@ -261,6 +259,100 @@ h1.message-txt {
 .sidenav-u li {
   text-transform: capitalize;
   color: #7d7d7d;
+}
+
+/*Profile*/
+.u-form {
+  border: 1px solid #dce0e0;
+}
+.u-form-header {
+    background-color: #edefed;
+    border-bottom: 1px solid #dce0e0;
+    color: #484848;
+    font-size: 1em;
+    padding-top: 12px;
+    padding-bottom: 12px;
+}
+
+.u-form-header p {
+    margin-left: 1.1em;
+    display: inline-block;
+}
+
+.u-btn {
+    display: inline-block;
+    background: white;
+    border: 1.5px solid #7d7d7d;
+    color: #7d7d7d;
+    font-size: 0.6em;
+    line-height: 0.6em;
+    padding: 7px 21px;
+    text-align: center;
+    margin-left: 61em;
+}
+
+.u-btn:hover{
+  color: #15B7B9;
+}
+
+.u-body {
+    padding: 20px;
+    overflow: hidden;
+    background: #fff;
+}
+.u-body p {
+  font-size: 0.8em;
+}
+.u-left {
+  float: left;
+  width: 25%;
+}
+.u-right {
+  float: right;
+  width: 75%;
+}
+
+hr {
+  border-top: 0px solid #dce0e0;
+  border-bottom: 1px solid #dce0e0;
+  margin-bottom: 1em;
+}
+
+.u-header {
+  font-size: 1em;
+  font-weight: 600;
+  margin-bottom: 1em;
+}
+.general {
+  margin-bottom: 2em;
+}
+.general span {
+  margin-right: 5em;
+}
+
+.u-skill {
+    float: left;
+    text-align: center;
+    background: #15b7b9;
+    color: #fff;
+    padding: 0.4em;
+    font-size: 0.4em;
+}
+
+.btn-u {
+    background: white;
+    border: 1.5px solid #7d7d7d;
+    color: #7d7d7d;
+    font-size: 0.6em;
+    line-height: 0.9em;
+    padding: 7px 21px;
+    text-align: center;
+}
+
+.skills-u {
+  float: left;
+  width:25%;
+  margin-bottom: 0.9em;
 }
 
 /*Messages*/
@@ -316,18 +408,18 @@ opacity: 0.25;
   list-style: none;
   background: #e5e5e5;
   margin: 0;
-  padding: 0 0 50px 0; // finality
+  padding: 0 0 50px 0; 
   li {
     padding: 0.5rem;
     overflow: hidden;
     display: flex;
   }
   .avatar {
-    width: 40px; // stronger than %
-    // could set height, but gonna bottom-align instead
-    position: relative; // for triangle
+    width: 40px; 
+
+    position: relative; 
     img {
-      display: block; // triangle position
+      display: block; // triangle 
       width: 100%;
     }
   }
@@ -354,7 +446,7 @@ opacity: 0.25;
   align-items: flex-end;
   .messages {
     order: 1;
-    border-bottom-right-radius: 0; // weird shadow fix
+    border-bottom-right-radius: 0; 
   }
   .avatar {
     order: 2;
@@ -368,7 +460,7 @@ opacity: 0.25;
       border: 5px solid white;
       border-right-color: transparent;
       border-top-color: transparent;
-      box-shadow: 1px 1px 2px rgba(black, 0.2); // not quite perfect but close
+      box-shadow: 1px 1px 2px rgba(black, 0.2); 
     }
   }
 }
@@ -388,7 +480,3 @@ opacity: 0.25;
   }
 }
 
-@keyframes pulse {
-  from { opacity: 0; }
-  to { opacity: 0.5; }
-}
